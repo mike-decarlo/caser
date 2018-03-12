@@ -1,0 +1,13 @@
+Package: caseling
+Type: Package
+Title: Getting cases of your data, easily.
+Version: 0.0.0.9010
+Authors@R: person("Mike", "DeCarlo", email = "decarlo.michael.j@gmail.com", role = c("aut", "cre"))
+Description: This package was started to provide quick solutions to data sampling. The methods within this package are not necessarily original or revolutionary, but instead focus on methods that are commonly used and can be accessed more easliy and faster by calling a single function.
+Depends: 
+License: file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1.9000
+Imports:
+Suggests:
