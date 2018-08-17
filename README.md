@@ -1,4 +1,5 @@
 # caseling
+[![Build Status](https://travis-ci.org/mike-decarlo/caseling.svg?branch=master)](https://travis-ci.org/mike-decarlo/caseling)
 
 Getting cases of your data...easily!
 
