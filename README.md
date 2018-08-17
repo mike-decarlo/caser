@@ -1,5 +1,5 @@
 # caseling
-[![Build Status](https://travis-ci.org/mike-decarlo/caseling.svg?branch=master)](https://travis-ci.org/mike-decarlo/caseling)[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/mike-decarlo/caseling?branch=master&svg=true)]
+[![Build Status](https://travis-ci.org/mike-decarlo/caseling.svg?branch=master)](https://travis-ci.org/mike-decarlo/caseling)[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/mike-decarlo/caseling?branch=master&svg=true)](https://ci.appveyor.com/project/mike-decarlo/caseling)
 
 Getting cases of your data...easily!
 
