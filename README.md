@@ -1,5 +1,5 @@
 # caseling
-https://travis-ci.org/mike-decarlo/caseling.svg?branch=master
+![alt text](https://travis-ci.org/mike-decarlo/caseling.svg?branch=master)
 
 Getting cases of your data...easily!
 
