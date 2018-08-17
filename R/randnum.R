@@ -10,9 +10,9 @@
 #' @examples
 #' randnum(min = 1, max = 10, type = "integer")
 #' 
-#' randnumb(min = 1, max = 10, type = "float", digits = 3)
+#' randnum(min = 1, max = 10, type = "float", digits = 3)
 #' 
-#' randnumb(min = 1, max = 10, type = "float", digits = "5")
+#' randnum(min = 1, max = 10, type = "float", digits = "5")
 #' 
 #' @export
 randnum <- function(min = 1, max = 1000, type = "integer", digits = NA) {
