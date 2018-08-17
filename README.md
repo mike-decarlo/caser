@@ -18,7 +18,7 @@ Some prerequisites to getting this product up and running in R:
 
 Now that R is setup (with or without RStudio) and the <code>{devtools}</code> package is installed, it's possible to start downloading and installing R packages directly from Github. To download, install, and start using the {caseling} package follow the steps:
 - Download and install the <code>{caseling}</code> package from Github
-  - From R/RStudio console enter: <code>devtools::install_github("wolfm4ne/caseling")</code>
+  - From R/RStudio console enter: <code>devtools::install_github("mike-decarlo/caseling")</code>
 - Load the <code>{caseling}</code> package library
   - From R/RStudio console enter: <code>library(caseling)</code>
 
