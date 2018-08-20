@@ -70,5 +70,6 @@ randnum <- function(min = 1, max = 1000, type = "integer", digits = NA) {
         , "'float'.\n"
         )
     )
+    stop()
   }
 }
