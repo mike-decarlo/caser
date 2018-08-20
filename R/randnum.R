@@ -19,6 +19,19 @@
 #' randnum(min = 1, max = 10, type = "float", digits = "5")
 #' @export
 randnum <- function(min = 1, max = 1000, type = "integer", digits = NA) {
+  # Min should be less than or equal to max, if not switch values
+  if (min > max) {
+    message(
+      paste0(
+        "Warning: Min must be less than or equal to max.\n"
+        , "Switching values to satisfy requirements.\n"
+      )
+    )
+    temp <- min
+    min <- max
+    max <- temp
+    rm(temp)
+  }
   # Error handling for number of digits
   # Should be a number value (either as a numeric or character class)
   # Should be an integer
