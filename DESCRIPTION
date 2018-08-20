@@ -7,7 +7,8 @@ Author: Mike DeCarlo [aut, cre]
 Maintainer: Mike DeCarlo <mikedecarlo.rdev@gmail.com>
 Depends: R (>= 3.0)
 Suggests: 
-Imports: 
+    testthat,
+    covr
 Description: Quick solutions to sampling. The goal not being originality or revolutionary methods, but instead commonly used and accessable for ease and reduction of lines of code.
 License: file LICENSE
 URL: https://github.com/mike-decarlo/caseling
