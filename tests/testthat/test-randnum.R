@@ -22,3 +22,11 @@ test_that("float number characters is correct", {
   random <- randnum(1.1, 1.9, "float", 3)
   expect_gte(nchar(random), 3)
 })
+
+test_that("exits on NA error", {
+  expect_error(randnum(1, 2, "float"))
+})
+
+test_that("max gte min", {
+  expect_output(randnum(2, 1))
+})
