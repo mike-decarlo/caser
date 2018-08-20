@@ -28,5 +28,11 @@ test_that("exits on NA error", {
 })
 
 test_that("max gte min", {
-  expect_output(randnum(2, 1))
+  expect_message(
+    randnum(2, 1)
+    , paste0(
+        "Warning: Min must be less than or equal to max.\n"
+        , "Switching values to satisfy requirements.\n"
+        )
+  )
 })
