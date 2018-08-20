@@ -1,6 +1,6 @@
 Package: caseling
-Version: 0.0.1.0001
-Date: 2018-08-17
+Version: 0.0.2.0001
+Date: 2018-08-20
 Title: Getting cases of your data, easily.
 Authors@R: person("Mike", "DeCarlo", email = "mikedecarlo.rdev@gmail.com", role = c("aut", "cre"))
 Author: Mike DeCarlo [aut, cre]
@@ -14,4 +14,4 @@ URL: https://github.com/mike-decarlo/caseling
 BugReports: https://github.com/mike-decarlo/caseling
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.0.1.9000
+RoxygenNote: 6.1.0.9000
