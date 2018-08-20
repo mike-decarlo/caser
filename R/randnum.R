@@ -32,7 +32,7 @@ randnum <- function(min = 1, max = 1000, type = "integer", digits = NA) {
       message(
         paste0(
           "Error: Argument 'digits' must be a numeric or character string of a"
-          ," number value.\nE.g., 1 or '1', but not 'e'.\n"
+          , " number value.\nE.g., 1 or '1', but not 'e'.\n"
           )
         )
       stop()

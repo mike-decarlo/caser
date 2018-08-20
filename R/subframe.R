@@ -21,10 +21,10 @@
 #'   , sample(c("M", "F", "Z"), 100, replace = TRUE)
 #'   , rnorm(100, 0, 1))
 #' colnames(rand_frame) <- c("runif", "sex_sample", "rnorm")
-#'    
+#'
 #' # Convert into sub-frame array (default "no_subs")
 #' subbed_10 <- subframe(df = rand_frame)
-#'  
+#'
 #' # Convert into sub-frame array (5 "no_subs")
 #' subbed_5 <- subframe(df = rand_frame, no_subs = 5)
 #'
@@ -48,7 +48,7 @@ subframe <- function(df, no_subs = NULL) {
     }
     to_row <- from_row + sub_rows - 1
     df_nm <- paste(deparse(substitute(df)), i, sep = "_")
-    assign(df_nm, df[from_row:to_row,])
+    assign(df_nm, df[from_row:to_row, ])
     if (i == 1) {
       for (m in 1:no_subs) {
         if (m == 1) {
