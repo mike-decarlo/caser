@@ -53,4 +53,5 @@ test_that("type argument is either 'integer' or 'float'", {
       , " of either 'integer' or'float'.\n"
       )
     )
+  expect_error(randnum(1, 2, type = "other"))
 })
