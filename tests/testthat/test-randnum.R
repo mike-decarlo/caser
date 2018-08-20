@@ -46,5 +46,11 @@ test_that("max gte min", {
 })
 
 test_that("type argument is either 'integer' or 'float'", {
-  expect_error(randnum(1, 2, type = "other"))
+  expect_message(
+    randnum(1, 2, type = "other")
+    , paste0(
+      "Error: Argument 'type' must have a value"
+      , " of either 'integer' or'float'.\n"
+      )
+    )
 })
