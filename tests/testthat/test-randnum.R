@@ -23,8 +23,16 @@ test_that("float number characters is correct", {
   expect_gte(nchar(random), 3)
 })
 
-test_that("exits on NA error", {
+test_that("exits on NA error or non-number for float", {
   expect_error(randnum(1, 2, "float"))
+  expect_error(randnum(1, 2, "float", "A"))
+  expect_message(
+    randnum(1, 2, "float", "3")
+    , paste0(
+      "Non-numeric value entered for argument 'digits'.\n"
+      , "Converting to numeric...\n"
+      )
+    )
 })
 
 test_that("max gte min", {
@@ -35,4 +43,8 @@ test_that("max gte min", {
         , "Switching values to satisfy requirements.\n"
         )
   )
+})
+
+test_that("type argument is either 'integer' or 'float'", {
+  expect_error(randnum(1, 2, type = "other"))
 })
