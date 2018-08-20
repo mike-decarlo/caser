@@ -10,7 +10,7 @@ subframe(df, no_subs = NULL)
 \item{df}{data frame with any number of columns or rows to be subsetted to
 equivalently sized sub-frames.}
 
-\item{no_subs}{singel, numeric value of the number of sub-frames desired.
+\item{no_subs}{single, numeric value of the number of sub-frames desired.
 Default is \code{NULL} in which case, if no value is entered, the frame
 will be divided into 10 sub-frames.}
 }

@@ -10,7 +10,7 @@
 #'   sets for code or method testing, etc.
 #' @param df data frame with any number of columns or rows to be subsetted to
 #'   equivalently sized sub-frames.
-#' @param no_subs singel, numeric value of the number of sub-frames desired.
+#' @param no_subs single, numeric value of the number of sub-frames desired.
 #'   Default is \code{NULL} in which case, if no value is entered, the frame
 #'   will be divided into 10 sub-frames.
 #' @return array with dimensions as sub-frame rows, sub-frame columns, and
