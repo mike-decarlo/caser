@@ -24,7 +24,6 @@ The \code{"subframe"} function is a subsetting function intended to
   by evaluating the number of observations in the original data set and
   calculating how many rows should be in each subset for a given nubmer of
   subsets.
- 
 The purpose behind \code{"subframe"} is to break apart large data frames into
   smaller ones for the sake of efficiency. This could be useful for test
   sets for code or method testing, etc.
@@ -45,5 +44,4 @@ subbed_5 <- subframe(df = rand_frame, no_subs = 5)
 for (i in 1:dim(subbed_10)[3]) {
   assign(paste0("rand_frame_", i), subbed_10[, , i])
 }
- 
 }
