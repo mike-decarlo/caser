@@ -24,8 +24,8 @@ matrix:
 #      r_github_packages:
 #        - HenrikBengtsson/globals
 #        - HenrikBengtsson/listenv
-    - os: osx
-      r: release
+#    - os: osx
+#      r: release
     - os: linux
       r: release
       r_check_args: --no-build-vignettes --no-codoc --no-examples --no-tests --no-manual --ignore-vignettes
