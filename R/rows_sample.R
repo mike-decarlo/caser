@@ -26,7 +26,6 @@ rows_sample <- function(df, n, replace = FALSE) {
       )
     stop()
   }
-  
   d <- as.data.frame(df[sample(x = nrow(df), size = n, replace = replace), ])
   colnames(d) <- colnames(df)
   return(d)
