@@ -29,9 +29,9 @@ either an \code{integer} or \code{float} value}
   float with a specified number of decimal digits
 }
 \examples{
-rand_num(min = 1, max = 10, type = "integer")
+rand_num(n = 1, min = 1, max = 10, type = "integer")
 
-rand_num(min = 1, max = 10, type = "float", digits = 3)
+rand_num(n = 2, min = 1, max = 10, type = "float", digits = 3)
 
-rand_num(min = 1, max = 10, type = "float", digits = "5")
+rand_num(n = 3, min = 1, max = 10, type = "float", digits = "5")
 }

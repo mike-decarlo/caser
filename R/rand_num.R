@@ -14,11 +14,11 @@
 #' @param digits \code{optional} a number value, to accompany
 #'   \code{type = "float"} and specify the number of decimal digits to include
 #' @examples
-#' rand_num(min = 1, max = 10, type = "integer")
+#' rand_num(n = 1, min = 1, max = 10, type = "integer")
 #'
-#' rand_num(min = 1, max = 10, type = "float", digits = 3)
+#' rand_num(n = 2, min = 1, max = 10, type = "float", digits = 3)
 #'
-#' rand_num(min = 1, max = 10, type = "float", digits = "5")
+#' rand_num(n = 3, min = 1, max = 10, type = "float", digits = "5")
 #' @export
 rand_num <- function(n = NULL, min = NULL, max = NULL, type = "integer", digits = NULL) {
   # Min should be less than or equal to max, if not switch values
