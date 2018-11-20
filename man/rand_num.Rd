@@ -4,7 +4,7 @@
 \alias{rand_num}
 \title{Random Number Generator}
 \usage{
-rand_num(n = NULL, min = NULL, max = NULL, type = NULL,
+rand_num(n = NULL, min = NULL, max = NULL, type = "integer",
   digits = NULL)
 }
 \arguments{
