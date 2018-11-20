@@ -37,7 +37,7 @@ test_that("exits on NA error or non-number for float", {
 
 test_that("max gte min", {
   expect_message(
-    rand_num(1, 2, 1)
+    rand_num(1, 2, 1, "integer")
     , paste0(
         "Warning: Min must be less than or equal to max.\n"
         , "Switching values to satisfy requirements.\n"
