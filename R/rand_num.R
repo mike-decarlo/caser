@@ -20,7 +20,7 @@
 #'
 #' rand_num(min = 1, max = 10, type = "float", digits = "5")
 #' @export
-rand_num <- function(n = NULL, min = NULL, max = NULL, type = NULL, digits = NULL) {
+rand_num <- function(n = NULL, min = NULL, max = NULL, type = "integer", digits = NULL) {
   # Min should be less than or equal to max, if not switch values
   if (min > max) {
     message(
