@@ -1,8 +1,8 @@
-context("test-subframe")
+context("test-sub_frame")
 library(caseling)
 
 df <- data.frame("X" = rnorm(100, 0, 1), "Y" = runif(100, 0, 1))
 
 test_that("no_subs can be NULL", {
-  expect_silent(subframe(df = df, no_subs = NULL))
+  expect_silent(sub_frame(df = df, no_subs = NULL))
 })
