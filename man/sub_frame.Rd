@@ -29,19 +29,12 @@ The purpose behind \code{"sub_frame"} is to break apart large data frames into
   sets for code or method testing, etc.
 }
 \examples{
-# Create data frame
-rand_frame <- data.frame(runif(100, 0, 1)
-  , sample(c("M", "F", "Z"), 100, replace = TRUE)
-  , rnorm(100, 0, 1))
-colnames(rand_frame) <- c("runif", "sex_sample", "rnorm")
+# Data frame of 100 random observations from normal and uniform
+df <- data.frame("X" = rnorm(100, 0, 1), "Y" = runif(100, 0, 1))
 
-# Convert into sub-frame array (default "num_subs")
-subbed_10 <- sub_frame(df = rand_frame)
+# Sub-frame to 2 data frames
+sub_frame(df, 2)
 
-# Convert into sub-frame array (5 "num_subs")
-subbed_5 <- sub_frame(df = rand_frame, num_subs = 5)
-
-for (i in 1:dim(subbed_10)[3]) {
-  assign(paste0("rand_frame_", i), subbed_10[, , i])
-}
+# Sub-frame with default sub-framing
+sub_frame(df)
 }
