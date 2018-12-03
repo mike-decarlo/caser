@@ -16,21 +16,14 @@
 #' @return array with dimensions as sub-frame rows, sub-frame columns, and
 #'  and sub-frame index.
 #' @examples
-#' # Create data frame
-#' rand_frame <- data.frame(runif(100, 0, 1)
-#'   , sample(c("M", "F", "Z"), 100, replace = TRUE)
-#'   , rnorm(100, 0, 1))
-#' colnames(rand_frame) <- c("runif", "sex_sample", "rnorm")
-#'
-#' # Convert into sub-frame array (default "num_subs")
-#' subbed_10 <- sub_frame(df = rand_frame)
-#'
-#' # Convert into sub-frame array (5 "num_subs")
-#' subbed_5 <- sub_frame(df = rand_frame, num_subs = 5)
-#'
-#' for (i in 1:dim(subbed_10)[3]) {
-#'   assign(paste0("rand_frame_", i), subbed_10[, , i])
-#' }
+#' # Data frame of 100 random observations from normal and uniform
+#' df <- data.frame("X" = rnorm(100, 0, 1), "Y" = runif(100, 0, 1))
+#' 
+#' # Sub-frame to 2 data frames
+#' sub_frame(df, 2)
+#' 
+#' # Sub-frame with default sub-framing
+#' sub_frame(df)
 #' @export
 sub_frame <- function(df = NULL, num_subs = NULL) {
   if (is.null(df)) {
@@ -39,5 +32,11 @@ sub_frame <- function(df = NULL, num_subs = NULL) {
     df <- as.data.frame(df)
     warning("\nArgument 'df' converted to data.frame class for sub-framing.\n")
   }
-  split(df, cut(seq_along(df), num_subs, labels = F))
+  if (is.null(num_subs)) {
+    num_subs <- 10
+  } else if (class(num_subs) != "numeric") {
+    stop("\nArgument 'num_subs' must be numeric.\n")
+  } 
+  n <- nrow(df) / num_subs
+  split(df, rep(1:ceiling(nrow(df) / n), each = n, length.out = nrow(mtcars)))
 }
