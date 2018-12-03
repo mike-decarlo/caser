@@ -1,7 +1,7 @@
 Package: caseling
-Version: 0.0.2.0001
-Date: 2018-08-20
-Title: Getting cases of your data, easily
+Version: 0.0.2.2
+Date: 2018-12-03
+Title: Streamlined Solutions for Sampling and Subsetting in R
 Authors@R: person("Mike", "DeCarlo", email = "mikedecarlo.rdev@gmail.com", role = c("aut", "cre"))
 Author: Mike DeCarlo [aut, cre]
 Maintainer: Mike DeCarlo <mikedecarlo.rdev@gmail.com>
