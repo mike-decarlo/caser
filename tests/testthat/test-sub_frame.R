@@ -15,3 +15,7 @@ test_that("if df not data.frame it gets converted", {
 test_that("null df values error", {
   expect_error(sub_frame(df = NULL, num_subs = 4))
 })
+
+test_that("non null, non numeric value for num_subs errors", {
+  expect_error(sub_frame(df = df, num_subs = "4"))
+})
