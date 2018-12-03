@@ -33,44 +33,11 @@
 #' }
 #' @export
 sub_frame <- function(df = NULL, num_subs = NULL) {
-  c_len <- ncol(df)
-  r_len <- nrow(df)
-  n_cell <- c_len * r_len
-  if (is.null(num_subs)) {
-    num_subs <- r_len / ((0.10 * n_cell) / c_len)
+  if (is.null(df)) {
+    stop("\nArgument 'df' must be a non-null object.\n")
+  } else if (class(df) != "data.frame") {
+    df <- as.data.frame(df)
+    warning("\nArgument 'df' converted to data.frame class for sub-framing.\n")
   }
-  sub_rows <- r_len / num_subs
-  for (i in 1:num_subs) {
-    if (i == 1) {
-      from_row <- 1
-    } else {
-      from_row <- from_row + sub_rows
-    }
-    to_row <- from_row + sub_rows - 1
-    df_nm <- paste(deparse(substitute(df)), i, sep = "_")
-    assign(df_nm, df[from_row:to_row, ])
-    if (i == 1) {
-      for (m in 1:num_subs) {
-        if (m == 1) {
-          subnames <- c(paste0("sub_", m))
-        } else {
-        subnames <- c(subnames, paste0("sub_", m))
-        }
-      }
-      subs <- array(dim = c(sub_rows, c_len, num_subs)
-                    , dimnames = list(c(1:sub_rows)
-                                      , c(colnames(df))
-                                      , c(subnames)
-                                      )
-                    )
-    }
-    for (j in 1:sub_rows) {
-      for (k in 1:c_len) {
-        for (l in 1:num_subs) {
-          subs[j, k, i] <- get(df_nm)[j, k]
-        }
-      }
-    }
-  }
-  return(subs)
+  split(df, cut(seq_along(df), num_subs, labels = F))
 }
