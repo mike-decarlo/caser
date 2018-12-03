@@ -36,7 +36,7 @@ sub_frame <- function(df = NULL, num_subs = NULL) {
     num_subs <- 10
   } else if (class(num_subs) != "numeric") {
     stop("\nArgument 'num_subs' must be numeric.\n")
-  } 
-  n <- nrow(df) / num_subs
-  split(df, rep(1:ceiling(nrow(df) / n), each = n, length.out = nrow(mtcars)))
+  }
+  options(warn = -1)
+  split(df, rep(1:num_subs, each = ceiling(nrow(df) / num_subs), length.out = nrow(df)))
 }
