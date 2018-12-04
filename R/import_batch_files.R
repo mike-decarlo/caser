@@ -20,7 +20,7 @@ import_batch_files <- function(p = NULL, f = NULL, ext = NULL, ...) {
   # Check if p is non-null and character class
   if (is.null(p)) {
     stop("\nArgument 'p' must be non-null.\n")
-  } else if (class(path) != "character") {
+  } else if (class(p) != "character") {
     warning(stringr::str_c(
       "\nArgument 'p' must be a character string.\n"
       , "Converting to class 'character'...\n"
