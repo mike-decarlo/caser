@@ -25,13 +25,15 @@ either an \code{integer} or \code{float} value}
 \code{type = "float"} and specify the number of decimal digits to include}
 }
 \description{
-\code{generate_random_number} draws a random number(s) from a range either as an integer or a
-  float with a specified number of decimal digits
+\code{generate_random_number} draws a random number(s) from a range either
+  as an integer or a float with a specified number of decimal digits
 }
 \examples{
 generate_random_number(n = 1, min = 1, max = 10, type = "integer")
 
 generate_random_number(n = 2, min = 1, max = 10, type = "float", digits = 3)
 
-generate_random_number(n = 3, min = 1, max = 10, type = "float", digits = "5")
+generate_random_number(
+  n = 3, min = 1, max = 10, type = "float", digits = "5"
+  )
 }
