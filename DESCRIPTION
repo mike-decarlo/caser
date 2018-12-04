@@ -1,5 +1,5 @@
 Package: caser
-Version: 0.0.3.0
+Version: 0.0.3.9000
 Date: 2018-12-04
 Title: Streamlined Solutions for Sampling and Subsetting in R
 Authors@R: person("Mike", "DeCarlo", email = "mikedecarlo.rdev@gmail.com", role = c("aut", "cre"))
@@ -9,10 +9,14 @@ Depends: R (>= 3.0)
 Suggests: 
     testthat,
     covr
+Imports:
+    dplyr,
+    purrr,
+    stringr
 Description: Quick solutions to sampling. The goal not being originality or revolutionary methods, but instead commonly used and accessable for ease and reduction of lines of code.
 License: file LICENSE
-URL: https://github.com/mike-decarlo/caseling
-BugReports: https://github.com/mike-decarlo/caseling
+URL: https://github.com/mike-decarlo/caser
+BugReports: https://github.com/mike-decarlo/caser
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
