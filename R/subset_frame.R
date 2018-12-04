@@ -1,11 +1,11 @@
 #' A sub-framing function
 #'
-#' The \code{"sub_frame"} function is a subsetting function intended to
+#' The \code{"subset_frame"} function is a subsetting function intended to
 #'   produce equivalently size subsets from a single data frame. This is done
 #'   by evaluating the number of observations in the original data set and
 #'   calculating how many rows should be in each subset for a given nubmer of
 #'   subsets.
-#' The purpose behind \code{"sub_frame"} is to break apart large data frames into
+#' The purpose behind \code{"subset_frame"} is to break apart large data frames into
 #'   smaller ones for the sake of efficiency. This could be useful for test
 #'   sets for code or method testing, etc.
 #' @param df data frame with any number of columns or rows to be subsetted to
@@ -20,12 +20,12 @@
 #' df <- data.frame("X" = rnorm(100, 0, 1), "Y" = runif(100, 0, 1))
 #' 
 #' # Sub-frame to 2 data frames
-#' sub_frame(df, 2)
+#' subset_frame(df, 2)
 #' 
 #' # Sub-frame with default sub-framing
-#' sub_frame(df)
+#' subset_frame(df)
 #' @export
-sub_frame <- function(df = NULL, num_subs = NULL) {
+subset_frame <- function(df = NULL, num_subs = NULL) {
   if (is.null(df)) {
     stop("\nArgument 'df' must be a non-null object.\n")
   } else if (class(df) != "data.frame") {
