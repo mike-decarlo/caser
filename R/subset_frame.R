@@ -38,5 +38,12 @@ subset_frame <- function(df = NULL, num_subs = NULL) {
     stop("\nArgument 'num_subs' must be numeric.\n")
   }
   options(warn = -1)
-  split(df, rep(1:num_subs, each = ceiling(nrow(df) / num_subs), length.out = nrow(df)))
+  split(
+    df
+    , rep(
+      1:num_subs
+      , each = ceiling(nrow(df) / num_subs)
+      , length.out = nrow(df)
+      )
+    )
 }
