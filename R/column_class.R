@@ -1,6 +1,6 @@
 #' Returns all columns and classes matching specified class
 #' 
-#' The \code{col_class} function takes two arguments, \code{x}, a data.frame
+#' The \code{column_class} function takes two arguments, \code{x}, a data.frame
 #' object, and \code{find_class}, a single or vector of character value(s) of
 #' the class type desired.
 #' 
@@ -14,10 +14,10 @@
 #'   , col_c = as.factor(c("apple", "banana", "citrus"))
 #'   , col_d = as.character(c("one", "two", "three"))
 #' )
-#' col_class(x, "factor")
-#' col_class(x, c("integer", "character"))
+#' column_class(x, "factor")
+#' column_class(x, c("integer", "character"))
 #' @export
-col_class <- function(x, find_class = NULL) {
+column_class <- function(x, find_class = NULL) {
   if (is.null(colnames(x))) {
     stop(
       paste0(
