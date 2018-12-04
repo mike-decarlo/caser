@@ -26,13 +26,7 @@ test_that("float number characters is correct", {
 test_that("exits on NA error or non-number for float", {
   expect_error(generate_random_number(1, 1, 2, "float"))
   expect_error(generate_random_number(1, 1, 2, "float", "A"))
-  expect_message(
-    generate_random_number(1, 1, 2, "float", "3")
-    , paste0(
-      "Non-numeric value entered for argument 'digits'.\n"
-      , "Converting to numeric...\n"
-      )
-    )
+  expect_message(generate_random_number(1, 1, 2, "float", "3"))
 })
 
 test_that("max gte min", {
