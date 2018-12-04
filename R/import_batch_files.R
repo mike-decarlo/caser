@@ -35,6 +35,10 @@ import_batch_files <- function(p = NULL, f = NULL, ext = NULL, ...) {
       , "' does not exist.\n"
     ))
   }
+  # Check that f is non-null
+  if (is.null(f)) {
+    stop("\nArgument 'f' must be the non-null value of a function name.\n")
+  }
   # If passes checks, start importing
   paths <- list.files(
     path = p
