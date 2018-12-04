@@ -1,7 +1,7 @@
 #' Sample Random Rows from Data Frame
 #'
 #' It is common to want a random sampling of data from a large data set for
-#'   analysis of various forms. The \code{rows_sample} function takes
+#'   analysis of various forms. The \code{sample_rows} function takes
 #'   arguments needed to return a random sample of a data frame. Providing the
 #'   source data frame, a sample size, and whether or not replacement is
 #'   allowed in the sampling is all that is required for returning the sample.
@@ -13,9 +13,9 @@
 #'   yes, \code{FALSE} (by default) if no
 #' @keywords sample random row
 #' @examples
-#' iris_samp <- rows_sample(iris, 5, replace = FALSE)
+#' iris_samp <- sample_rows(iris, 5, replace = FALSE)
 #' @export
-rows_sample <- function(df, n, replace = FALSE) {
+sample_rows <- function(df, n, replace = FALSE) {
   if (replace == FALSE && n > nrow(df)) {
     message(
       paste0(
