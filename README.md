@@ -1,7 +1,7 @@
-# caseling
-[![Build Status](https://travis-ci.org/mike-decarlo/caseling.svg?branch=master)](https://travis-ci.org/mike-decarlo/caseling) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/mike-decarlo/caseling?branch=master&svg=true)](https://ci.appveyor.com/project/mike-decarlo/caseling) [![codecov](https://codecov.io/gh/mike-decarlo/caseling/branch/master/graph/badge.svg)](https://codecov.io/gh/mike-decarlo/caseling)
+# caser
+[![Build Status](https://travis-ci.org/mike-decarlo/caser.svg?branch=master)](https://travis-ci.org/mike-decarlo/caser) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/mike-decarlo/caser?branch=master&svg=true)](https://ci.appveyor.com/project/mike-decarlo/caser) [![codecov](https://codecov.io/gh/mike-decarlo/caser/branch/master/graph/badge.svg)](https://codecov.io/gh/mike-decarlo/caser)
 
-The <code>{caseling}</code> package for R contains tools for working with dataset subsetting and sampling. The goal here is to provide users an experience that is easier and faster than trying to figure out how to combine R functionality to arrive at these solutions. Additionally, while these tools are not exactly revolutionary, they are methods I have returned to again and again and so speeding them up and making them easier streamlines my work and I hope they do the same for other users as well.
+The <code>{caser}</code> package for R contains tools for working with dataset subsetting and sampling. The goal here is to provide users an experience that is easier and faster than trying to figure out how to combine R functionality to arrive at these solutions. Additionally, while these tools are not exactly revolutionary, they are methods I have returned to again and again and so speeding them up and making them easier streamlines my work and I hope they do the same for other users as well.
 
 ## Getting Started
 
@@ -15,11 +15,11 @@ Some prerequisites to getting this product up and running in R:
 
 ### Installing
 
-Now that R is setup (with or without RStudio) and the <code>{devtools}</code> package is installed, it's possible to start downloading and installing R packages directly from Github. To download, install, and start using the {caseling} package follow the steps:
-- Download and install the <code>{caseling}</code> package from Github
-  - From R/RStudio console enter: <code>devtools::install_github("mike-decarlo/caseling")</code>
-- Load the <code>{caseling}</code> package library
-  - From R/RStudio console enter: <code>library(caseling)</code>
+Now that R is setup (with or without RStudio) and the <code>{devtools}</code> package is installed, it's possible to start downloading and installing R packages directly from Github. To download, install, and start using the {caser} package follow the steps:
+- Download and install the <code>{caser}</code> package from Github
+  - From R/RStudio console enter: <code>devtools::install_github("mike-decarlo/caser")</code>
+- Load the <code>{caser}</code> package library
+  - From R/RStudio console enter: <code>library(caser)</code>
 
 ## Authors
 
