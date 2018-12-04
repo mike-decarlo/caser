@@ -1,12 +1,12 @@
 #' Dataframe Column Sorting Function
-#' \code{sort_cols} takes two arguments, the name of a dataframe and the order
+#' \code{sort_columns} takes two arguments, the name of a dataframe and the order
 #'   (ascending or descending), and will then provide the dataframe in the
 #'   column sorting as specified.
 #' @param x a dataframe object.
 #' @param order asc or desc for ascending or descending ordering respectively.
 #' @keywords sort columns dataframe
 #' @export
-sort_cols <- function(x = NULL, order = "asc") {
+sort_columns <- function(x = NULL, order = "asc") {
   if (is.null(x)) {
     stop(
       "The 'x' argument must be a non-null, dataframe object.\n"
