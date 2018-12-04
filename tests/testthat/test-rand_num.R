@@ -1,5 +1,5 @@
 context("test-rand_num")
-library(caseling)
+library(caser)
 
 test_that("as integer and as numeric are equivalent", {
   random <- rand_num(1, 1, 2, "integer")

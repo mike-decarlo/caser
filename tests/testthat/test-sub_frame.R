@@ -1,5 +1,5 @@
 context("test-sub_frame")
-library(caseling)
+library(caser)
 
 df <- data.frame("X" = rnorm(100, 0, 1), "Y" = runif(100, 0, 1))
 

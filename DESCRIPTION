@@ -1,6 +1,6 @@
-Package: caseling
-Version: 0.0.2.2
-Date: 2018-12-03
+Package: caser
+Version: 0.0.3.0
+Date: 2018-12-04
 Title: Streamlined Solutions for Sampling and Subsetting in R
 Authors@R: person("Mike", "DeCarlo", email = "mikedecarlo.rdev@gmail.com", role = c("aut", "cre"))
 Author: Mike DeCarlo [aut, cre]

@@ -1,4 +1,4 @@
 library(testthat)
-library(caseling)
+library(caser)
 
-test_check("caseling")
+test_check("caser")
