@@ -16,7 +16,7 @@
 #' @importFrom purrr map
 #' @importFrom dplyr bind_rows
 #' @export
-import_files_batch <- function(p = NULL, f = NULL, ext = NULL, ...) {
+import_batch_files <- function(p = NULL, f = NULL, ext = NULL, ...) {
   # Check if p is non-null and character class
   if (is.null(p)) {
     stop("\nArgument 'p' must be non-null.\n")
