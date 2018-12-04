@@ -1,6 +1,6 @@
 #' Random Number Generator
 #'
-#' \code{rand_num} draws a random number(s) from a range either as an integer or a
+#' \code{generate_random_number} draws a random number(s) from a range either as an integer or a
 #'   float with a specified number of decimal digits
 #' @param n a numeric argument, specifies the number of random numbers the user
 #'   would like returned
@@ -14,13 +14,13 @@
 #' @param digits \code{optional} a number value, to accompany
 #'   \code{type = "float"} and specify the number of decimal digits to include
 #' @examples
-#' rand_num(n = 1, min = 1, max = 10, type = "integer")
+#' generate_random_number(n = 1, min = 1, max = 10, type = "integer")
 #'
-#' rand_num(n = 2, min = 1, max = 10, type = "float", digits = 3)
+#' generate_random_number(n = 2, min = 1, max = 10, type = "float", digits = 3)
 #'
-#' rand_num(n = 3, min = 1, max = 10, type = "float", digits = "5")
+#' generate_random_number(n = 3, min = 1, max = 10, type = "float", digits = "5")
 #' @export
-rand_num <- function(n = NULL, min = NULL, max = NULL, type = "integer", digits = NULL) {
+generate_random_number <- function(n = NULL, min = NULL, max = NULL, type = "integer", digits = NULL) {
   # Min should be less than or equal to max, if not switch values
   if (min > max) {
     message(
