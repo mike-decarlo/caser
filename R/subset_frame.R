@@ -5,9 +5,9 @@
 #'   by evaluating the number of observations in the original data set and
 #'   calculating how many rows should be in each subset for a given nubmer of
 #'   subsets.
-#' The purpose behind \code{"subset_frame"} is to break apart large data frames into
-#'   smaller ones for the sake of efficiency. This could be useful for test
-#'   sets for code or method testing, etc.
+#' The purpose behind \code{"subset_frame"} is to break apart large data frames
+#'   into smaller ones for the sake of efficiency. This could be useful for
+#'   test sets for code or method testing, etc.
 #' @param df data frame with any number of columns or rows to be subsetted to
 #'   equivalently sized sub-frames.
 #' @param num_subs single, numeric value of the number of sub-frames desired.
@@ -18,10 +18,10 @@
 #' @examples
 #' # Data frame of 100 random observations from normal and uniform
 #' df <- data.frame("X" = rnorm(100, 0, 1), "Y" = runif(100, 0, 1))
-#' 
+#'
 #' # Sub-frame to 2 data frames
 #' subset_frame(df, 2)
-#' 
+#'
 #' # Sub-frame with default sub-framing
 #' subset_frame(df)
 #' @export

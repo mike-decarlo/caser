@@ -24,9 +24,9 @@ The \code{"subset_frame"} function is a subsetting function intended to
   by evaluating the number of observations in the original data set and
   calculating how many rows should be in each subset for a given nubmer of
   subsets.
-The purpose behind \code{"subset_frame"} is to break apart large data frames into
-  smaller ones for the sake of efficiency. This could be useful for test
-  sets for code or method testing, etc.
+The purpose behind \code{"subset_frame"} is to break apart large data frames
+  into smaller ones for the sake of efficiency. This could be useful for
+  test sets for code or method testing, etc.
 }
 \examples{
 # Data frame of 100 random observations from normal and uniform
