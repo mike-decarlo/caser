@@ -3,9 +3,9 @@
 \name{sort_columns}
 \alias{sort_columns}
 \title{Dataframe Column Sorting Function
-\code{sort_columns} takes two arguments, the name of a dataframe and the order
-  (ascending or descending), and will then provide the dataframe in the
-  column sorting as specified.}
+\code{sort_columns} takes two arguments, the name of a dataframe and the
+  order (ascending or descending), and will then provide the dataframe in
+  the column sorting as specified.}
 \usage{
 sort_columns(x = NULL, order = "asc", verbose = FALSE)
 }
@@ -20,9 +20,9 @@ objects being sorted.}
 }
 \description{
 Dataframe Column Sorting Function
-\code{sort_columns} takes two arguments, the name of a dataframe and the order
-  (ascending or descending), and will then provide the dataframe in the
-  column sorting as specified.
+\code{sort_columns} takes two arguments, the name of a dataframe and the
+  order (ascending or descending), and will then provide the dataframe in
+  the column sorting as specified.
 }
 \keyword{columns}
 \keyword{sort}

@@ -1,7 +1,7 @@
 #' Dataframe Column Sorting Function
-#' \code{sort_columns} takes two arguments, the name of a dataframe and the order
-#'   (ascending or descending), and will then provide the dataframe in the
-#'   column sorting as specified.
+#' \code{sort_columns} takes two arguments, the name of a dataframe and the
+#'   order (ascending or descending), and will then provide the dataframe in
+#'   the column sorting as specified.
 #' @param x dataframe object
 #' @param order character string; if \code{"asc"}, the function sorts in
 #'   ascending order; if \code{"desc"}, the function sorts in descending order.
