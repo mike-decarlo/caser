@@ -19,4 +19,12 @@ test_that("Silent when working correctly", {
     import_batch_files(p = ".", f = read.csv, ext = ".csv")
   )
 })
+test_that("Non-character value for 'p' gets resolved", {
+  expect_error(
+    import_batch_files(p = ., f = read.csv, ext = ".csv")
+  )
+  expect_error(
+    import_batch_files(p = 1, f = read.csv, ext = ".csv")
+  )
+})
 file.remove("./dat.csv")

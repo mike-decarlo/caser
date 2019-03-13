@@ -21,11 +21,10 @@ import_batch_files <- function(p = NULL, f = NULL, ext = NULL, ...) {
   if (is.null(p)) {
     stop("\nArgument 'p' must be non-null.\n")
   } else if (class(p) != "character") {
-    warning(stringr::str_c(
-      "\nArgument 'p' must be a character string.\n"
-      , "Converting to class 'character'...\n"
-    ))
-    p <- as.character(p)
+    stop(stringr::str_c(
+        "\nArgument 'p' must be a character string.\n"
+      )
+    )
   }
   # Check if file exists
   if (!file.exists(p)) {
