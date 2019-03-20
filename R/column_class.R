@@ -4,9 +4,9 @@
 #' object, and \code{find_class}, a single or vector of character value(s) of
 #' the class type desired.
 #'
-#' @param x a data.frame object with names columns
-#' @param find_class a single or vector of character value(s) of column class
-#'   types
+#' @param df data.frame; a \bold{data.frame} with named columns
+#' @param find_class string or string vector; a single or vector of string
+#'   value(s) of column class types
 #' @examples
 #' x <- data.frame(
 #'   col_a = as.factor(c("a", "b", "c"))
@@ -17,26 +17,26 @@
 #' column_class(x, "factor")
 #' column_class(x, c("integer", "character"))
 #' @export
-column_class <- function(x, find_class = NULL) {
-  if (is.null(colnames(x))) {
+column_class <- function(df = NULL, find_class = NULL) {
+  if (is.null(colnames(df))) {
     stop(
       paste0(
         "\nObject "
-        , deparse(substitute(x))
+        , deparse(substitute(df))
         , " does not contain named columns.\n"
         )
       )
   } else if (is.null(find_class)) {
     #return all column names and classes
-    c <- sapply(x, class)
+    c <- sapply(df, class)
   } else {
     # return all column names and classes where class matches
-    c <- sapply(x, class)
+    c <- sapply(df, class)
     if (length(find_class) > 1) {
     c <- c[c %in% find_class]
     } else {
       c <- c[c == find_class]
     }
   }
-  return(c)
+  c
 }

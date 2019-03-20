@@ -1,8 +1,8 @@
 context("test-column_class")
-test_that("Error message when 'x' object is NULL", {
+test_that("Error message when 'df' object is NULL", {
   x <- NULL
   expect_error(
-    column_class(x = x)
+    column_class(x)
   )
 })
 test_that("Returns all column classes when 'find_class' is NULL", {
