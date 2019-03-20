@@ -2,14 +2,14 @@
 % Please edit documentation in R/random_percents.R
 \name{random_percents}
 \alias{random_percents}
-\title{Return a vector of random proportions/percents that sum to 1/100%}
+\title{Return a vector of random proportions/percents that sum to 1/100}
 \usage{
-random_percents(b = NULL, s = 1)
+random_percents(b = NULL, s = NULL)
 }
 \arguments{
-\item{b}{numeric; the number of bins to generate.}
+\item{b}{numeric; the number of \bold{bins} to generate.}
 
-\item{s}{numeric; the seed for randomly generating numbers.}
+\item{s}{numeric; the \bold{seed} for randomly generating numbers.}
 }
 \description{
 Useful to split a data value into random parts that will sum back to the
@@ -18,10 +18,13 @@ Useful to split a data value into random parts that will sum back to the
 \examples{
 # With default seed value (1)
 random_percents(b = 2)
+
 # With specific seed value (45)
 random_percents(b = 2, s = 45)
+
 # With specific seed value (45) and more bins (9)
 random_percents(b = 9, s = 45)
+
 }
 \keyword{percent}
 \keyword{proportion}

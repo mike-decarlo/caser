@@ -12,9 +12,6 @@ test_that("errors when non-numeric 'b'", {
 
 test_that("errors when non-numeric 's'", {
   expect_error(
-    random_percents(b = 2, s = NULL)
-  )
-  expect_error(
     random_percents(b = 2, s = "s")
   )
 })
