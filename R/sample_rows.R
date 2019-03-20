@@ -31,7 +31,7 @@ sample_rows <- function(df = NULL, n, s = NULL, replace = FALSE) {
       )
     stop()
   }
-  if(!is.null(s)){
+  if (!is.null(s)){
     set.seed(s)
   }
   d <- as.data.frame(df[sample(x = nrow(df), size = n, replace = replace), ])
