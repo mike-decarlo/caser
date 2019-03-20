@@ -26,7 +26,7 @@ test_that("errors when sample size exceeds population, no replacement", {
 
 test_that("Seed control works", {
   expect_silent(
-    sample_rows(df = df,n = 50, s = 1, replace = F)
+    sample_rows(df = df, n = 50, s = 1, replace = F)
   )
   expect_silent(
     sample_rows(df = df, n = 50, replace = F)
