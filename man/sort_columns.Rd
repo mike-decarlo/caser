@@ -7,12 +7,12 @@
   order (ascending or descending), and will then provide the dataframe in
   the column sorting as specified.}
 \usage{
-sort_columns(x = NULL, order = "asc", verbose = FALSE)
+sort_columns(df = NULL, order = "asc", verbose = FALSE)
 }
 \arguments{
-\item{x}{dataframe object}
+\item{df}{data.frame; the source \bold{data.frame} to be sorted.}
 
-\item{order}{character string; if \code{"asc"}, the function sorts in
+\item{order}{string; if \code{"asc"}, the function sorts in
 ascending order; if \code{"desc"}, the function sorts in descending order.}
 
 \item{verbose}{logical; if \code{TRUE}, the function prints messages about
