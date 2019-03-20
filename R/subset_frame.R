@@ -25,24 +25,24 @@
 #' # Sub-frame with default sub-framing
 #' subset_frame(df)
 #' @export
-subset_frame <- function(df = NULL, num_subs = NULL) {
+subset_frame <- function(df = NULL, n = NULL) {
   if (is.null(df)) {
     stop("\nArgument 'df' must be a non-null object.\n")
   } else if (class(df) != "data.frame") {
     df <- as.data.frame(df)
     warning("\nArgument 'df' converted to data.frame class for sub-framing.\n")
   }
-  if (is.null(num_subs)) {
-    num_subs <- 10
-  } else if (class(num_subs) != "numeric") {
+  if (is.null(n)) {
+    n <- 10
+  } else if (class(n) != "numeric") {
     stop("\nArgument 'num_subs' must be numeric.\n")
   }
   options(warn = -1)
   split(
     df
     , rep(
-      1:num_subs
-      , each = ceiling(nrow(df) / num_subs)
+      1:n
+      , each = ceiling(nrow(df) / n)
       , length.out = nrow(df)
       )
     )

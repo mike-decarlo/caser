@@ -4,7 +4,7 @@
 \alias{subset_frame}
 \title{A sub-framing function}
 \usage{
-subset_frame(df = NULL, num_subs = NULL)
+subset_frame(df = NULL, n = NULL)
 }
 \arguments{
 \item{df}{data.frame; a \bold{data.frame} with any number of columns or rows
