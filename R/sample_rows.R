@@ -9,9 +9,10 @@
 #'   identify which observations are selected into the sample.
 #' @param df data.frame; the source \bold{data.frame} to be sampled from
 #' @param n numeric; sample size
-#' @param s \code{(optional)} numeric; the \bold{seed} for randomly generating numbers.
-#' @param replace logical; should the sampling method use repalcement? \code{TRUE} if
-#'   yes, \code{FALSE} (by default) if no
+#' @param s \code{(optional)} numeric; the \bold{seed} for randomly generating
+#'   numbers.
+#' @param replace logical; should the sampling method use repalcement?
+#'   \code{TRUE} if yes, \code{FALSE} (by default) if no
 #' @keywords sample random row
 #' @examples
 #' iris_samp <- sample_rows(iris, 5, replace = FALSE)

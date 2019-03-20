@@ -11,10 +11,11 @@ sample_rows(df = NULL, n, s = NULL, replace = FALSE)
 
 \item{n}{numeric; sample size}
 
-\item{s}{\code{(optional)} numeric; the \bold{seed} for randomly generating numbers.}
+\item{s}{\code{(optional)} numeric; the \bold{seed} for randomly generating
+numbers.}
 
-\item{replace}{logical; should the sampling method use repalcement? \code{TRUE} if
-yes, \code{FALSE} (by default) if no}
+\item{replace}{logical; should the sampling method use repalcement?
+\code{TRUE} if yes, \code{FALSE} (by default) if no}
 }
 \description{
 It is common to want a random sampling of data from a large data set for
