@@ -62,10 +62,10 @@ generate_random_number <- function(n = NULL, min = NULL, max = NULL
       digits <- round(as.numeric(digits), 0)
     }
   } else if (type == "float") {
-    x <- round(runif(n = n, min = min, max = max), digits = digits)
+    (round(runif(n = n, min = min, max = max), digits = digits))
   } else if (type == "integer") {
     digits <- 0
-    x <- round(runif(n = n, min = min, max = max), digits = digits)
+    (round(runif(n = n, min = min, max = max), digits = digits))
   } else {
     stop(
       paste0(
