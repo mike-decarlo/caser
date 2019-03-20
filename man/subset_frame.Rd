@@ -7,12 +7,12 @@
 subset_frame(df = NULL, num_subs = NULL)
 }
 \arguments{
-\item{df}{data frame with any number of columns or rows to be subsetted to
-equivalently sized sub-frames.}
+\item{df}{data.frame; a \bold{data.frame} with any number of columns or rows
+to be subsetted to equally sized sub-frames.}
 
-\item{num_subs}{single, numeric value of the number of sub-frames desired.
-Default is \code{NULL} in which case, if no value is entered, the frame
-will be divided into 10 sub-frames.}
+\item{n}{numeric; value of the \bold{number of sub-frames} desired. Defaults
+to \code{NULL} in which case, if no value is entered, the frame will be
+divided into 10 sub-frames.}
 }
 \value{
 array with dimensions as sub-frame rows, sub-frame columns, and

@@ -8,11 +8,11 @@
 #' The purpose behind \code{"subset_frame"} is to break apart large data frames
 #'   into smaller ones for the sake of efficiency. This could be useful for
 #'   test sets for code or method testing, etc.
-#' @param df data frame with any number of columns or rows to be subsetted to
-#'   equivalently sized sub-frames.
-#' @param num_subs single, numeric value of the number of sub-frames desired.
-#'   Default is \code{NULL} in which case, if no value is entered, the frame
-#'   will be divided into 10 sub-frames.
+#' @param df data.frame; a \bold{data.frame} with any number of columns or rows
+#'   to be subsetted to equally sized sub-frames.
+#' @param n numeric; value of the \bold{number of sub-frames} desired. Defaults
+#'   to \code{NULL} in which case, if no value is entered, the frame will be
+#'   divided into 10 sub-frames.
 #' @return array with dimensions as sub-frame rows, sub-frame columns, and
 #'  and sub-frame index.
 #' @examples
