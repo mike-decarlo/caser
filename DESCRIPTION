@@ -1,6 +1,6 @@
 Package: caser
-Version: 0.0.4.9001
-Date: 2018-12-04
+Version: 0.1.1.9000
+Date: 2018-03-20
 Title: Streamlined Solutions for Sampling and Subsetting in R
 Authors@R: person("Mike", "DeCarlo", email = "mikedecarlo.rdev@gmail.com", role = c("aut", "cre"))
 Author: Mike DeCarlo [aut, cre]
