@@ -4,14 +4,16 @@
 \alias{sample_rows}
 \title{Sample Random Rows from Data Frame}
 \usage{
-sample_rows(df, n, replace = FALSE)
+sample_rows(df = NULL, n, s = NULL, replace = FALSE)
 }
 \arguments{
-\item{df}{source data frame to be sampled from}
+\item{df}{data.frame; the source \bold{data.frame} to be sampled from}
 
-\item{n}{sample size}
+\item{n}{numeric; sample size}
 
-\item{replace}{shoould the smapling method use repalcement? \code{TRUE} if
+\item{s}{\code{(optional)} numeric; the \bold{seed} for randomly generating numbers.}
+
+\item{replace}{logical; should the sampling method use repalcement? \code{TRUE} if
 yes, \code{FALSE} (by default) if no}
 }
 \description{
