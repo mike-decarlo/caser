@@ -3,11 +3,12 @@
 #' To import one or more files into a single df object. The files
 #'   should all be housed in the same directory, the path to which is supplied
 #'   as the sole argument.
-#' @param p A string of the directory path containing desired files.
-#' @param f A function name used for importing of individual files.
-#' @return array with dimensions as sub-frame rows, sub-frame columns, and
+#' @return An array with dimensions as sub-frame rows, sub-frame columns, and
 #'  and sub-frame index.
-#' @param ext Optional. A character string \itemize{
+#' @param p string; the \bold{path} to the directory containing desired files.
+#' @param f string; the \bold{function name} used for importing files.
+#' @param ext \code{(optional)} string; the file \bold{extension} to indicate
+#'   type of external data file to be imported:\itemize{
 #'   \item \code{".csv"}
 #'   \item \code{".tsv"}
 #'   \item \code{".xlsx"}

@@ -7,18 +7,19 @@
 import_batch_files(p = NULL, f = NULL, ext = NULL, ...)
 }
 \arguments{
-\item{p}{A string of the directory path containing desired files.}
+\item{p}{string; the \bold{path} to the directory containing desired files.}
 
-\item{f}{A function name used for importing of individual files.}
+\item{f}{string; the \bold{function name} used for importing files.}
 
-\item{ext}{Optional. A character string \itemize{
+\item{ext}{\code{(optional)} string; the file \bold{extension} to indicate
+type of external data file to be imported:\itemize{
 \item \code{".csv"}
 \item \code{".tsv"}
 \item \code{".xlsx"}
 }}
 }
 \value{
-array with dimensions as sub-frame rows, sub-frame columns, and
+An array with dimensions as sub-frame rows, sub-frame columns, and
  and sub-frame index.
 }
 \description{
