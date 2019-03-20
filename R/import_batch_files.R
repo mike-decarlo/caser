@@ -13,6 +13,7 @@
 #'   \item \code{".tsv"}
 #'   \item \code{".xlsx"}
 #'   }
+#' @param ... \code{(optional)} additional arguments specific to \code{f}.
 #' @importFrom stringr str_c
 #' @importFrom purrr map
 #' @importFrom dplyr bind_rows

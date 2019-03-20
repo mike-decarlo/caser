@@ -17,6 +17,8 @@ type of external data file to be imported:\itemize{
 \item \code{".tsv"}
 \item \code{".xlsx"}
 }}
+
+\item{...}{\code{(optional)} additional arguments specific to \code{f}.}
 }
 \value{
 An array with dimensions as sub-frame rows, sub-frame columns, and
