@@ -2,16 +2,16 @@
 #'
 #' \code{generate_random_number} draws a random number(s) from a range either
 #'   as an integer or a float with a specified number of decimal digits
-#' @param n a numeric argument, specifies the number of random numbers the user
-#'   would like returned
-#' @param min a numeric argument, specifies the minimum number in the range to
-#'   draw from
-#' @param max a numeric argument, specifies the maximum number in the range to
-#'   draw from
-#' @param type a character argument, must be either \code{"integer"} or
+#' @param n numeric; a numeric value that specifies the number of random
+#'   numbers the user would like returned
+#' @param min numeric; a numeric value that specifies the minimum number in the
+#'   range to draw from
+#' @param max numeric; a numeric value that specifies the maximum number in the
+#'   range to draw from
+#' @param type string; a string that must be either \code{"integer"} or
 #'   \code{"float"}, specifies the format of the desired, numeric output as
 #'   either an \code{integer} or \code{float} value
-#' @param digits \code{optional} a number value, to accompany
+#' @param digits \code{optional} numeric; a numeric value to accompany
 #'   \code{type = "float"} and specify the number of decimal digits to include
 #' @examples
 #' generate_random_number(n = 1, min = 1, max = 10, type = "integer")
@@ -62,16 +62,16 @@ generate_random_number <- function(n = NULL, min = NULL, max = NULL
       digits <- round(as.numeric(digits), 0)
     }
   } else if (type == "float") {
-    return(round(runif(n = n, min = min, max = max), digits = digits))
+    x <- round(runif(n = n, min = min, max = max), digits = digits)
   } else if (type == "integer") {
     digits <- 0
-    return(round(runif(n = n, min = min, max = max), digits = digits))
+    x <- round(runif(n = n, min = min, max = max), digits = digits)
   } else {
     stop(
       paste0(
         "Error: Argument 'type' must have a value of either 'integer' or"
         , "'float'.\n"
-        )
+      )
     )
   }
 }

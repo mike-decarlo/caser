@@ -8,20 +8,20 @@ generate_random_number(n = NULL, min = NULL, max = NULL,
   type = "integer", digits = NULL)
 }
 \arguments{
-\item{n}{a numeric argument, specifies the number of random numbers the user
-would like returned}
+\item{n}{numeric; a numeric value that specifies the number of random
+numbers the user would like returned}
 
-\item{min}{a numeric argument, specifies the minimum number in the range to
-draw from}
+\item{min}{numeric; a numeric value that specifies the minimum number in the
+range to draw from}
 
-\item{max}{a numeric argument, specifies the maximum number in the range to
-draw from}
+\item{max}{numeric; a numeric value that specifies the maximum number in the
+range to draw from}
 
-\item{type}{a character argument, must be either \code{"integer"} or
+\item{type}{string; a string that must be either \code{"integer"} or
 \code{"float"}, specifies the format of the desired, numeric output as
 either an \code{integer} or \code{float} value}
 
-\item{digits}{\code{optional} a number value, to accompany
+\item{digits}{\code{optional} numeric; a numeric value to accompany
 \code{type = "float"} and specify the number of decimal digits to include}
 }
 \description{
