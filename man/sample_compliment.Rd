@@ -20,7 +20,7 @@ iris_test <- sample_rows(
   df = iris
   , n = floor(0.2 * nrow(iris))
   , s = 1
-  , replace = F
+  , replace = FALSE
 )
 iris_train <- sample_compliment(orig = iris, samp = iris_test)
 }
