@@ -1,6 +1,6 @@
-#' Random Number Generator
+#' @title Random Number Generator
 #'
-#' \code{generate_random_number} draws a random number(s) from a range either
+#' @description \code{generate_random_number} draws a random number(s) from a range either
 #'   as an integer or a float with a specified number of decimal digits
 #' @param n numeric; a numeric value that specifies the number of random
 #'   numbers the user would like returned

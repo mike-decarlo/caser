@@ -1,6 +1,6 @@
-#' Return a vector of random proportions/percents that sum to 1/100
+#' @title Return a vector of random proportions/percents that sum to 1/100
 #'
-#' Useful to split a data value into random parts that will sum back to the
+#' @description Useful to split a data value into random parts that will sum back to the
 #'   total.
 #' @param b numeric; the number of \bold{bins} to generate.
 #' @param s numeric; the \bold{seed} for randomly generating numbers.

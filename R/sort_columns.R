@@ -1,5 +1,6 @@
-#' Dataframe Column Sorting Function
-#' \code{sort_columns} takes two arguments, the name of a dataframe and the
+#' @title Dataframe Column Sorting Function
+#'
+#' @description \code{sort_columns} takes two arguments, the name of a dataframe and the
 #'   order (ascending or descending), and will then provide the dataframe in
 #'   the column sorting as specified.
 #' @param df data.frame; the source \bold{data.frame} to be sorted.

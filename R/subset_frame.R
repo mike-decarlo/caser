@@ -1,6 +1,6 @@
-#' A sub-framing function
+#' @title A sub-framing function
 #'
-#' The \code{"subset_frame"} function is a subsetting function intended to
+#' @description The \code{"subset_frame"} function is a subsetting function intended to
 #'   produce equivalently size subsets from a single data frame. This is done
 #'   by evaluating the number of observations in the original data set and
 #'   calculating how many rows should be in each subset for a given nubmer of

@@ -1,6 +1,6 @@
-#' Import a batch of files
+#' @title Import a batch of files
 #'
-#' To import one or more files into a single df object. The files
+#' @description To import one or more files into a single df object. The files
 #'   should all be housed in the same directory, the path to which is supplied
 #'   as the sole argument.
 #' @return An array with dimensions as sub-frame rows, sub-frame columns, and

@@ -1,6 +1,6 @@
-#' Returns all columns and classes matching specified class
+#' @title Returns all columns and classes matching specified class
 #'
-#' The \code{column_class} function takes two arguments, \code{x}, a data.frame
+#' @description The \code{column_class} function takes two arguments, \code{x}, a data.frame
 #' object, and \code{find_class}, a single or vector of character value(s) of
 #' the class type desired.
 #'
