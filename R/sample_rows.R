@@ -1,12 +1,13 @@
 #' @title Sample Random Rows from Data Frame
 #'
-#' @description It is common to want a random sampling of data from a large data set for
-#'   analysis of various forms. The \code{sample_rows} function takes
-#'   arguments needed to return a random sample of a data frame. Providing the
-#'   source data frame, a sample size, and whether or not replacement is
-#'   allowed in the sampling is all that is required for returning the sample.
-#'   Row names (number typically) are returned in the sample making it easy to
-#'   identify which observations are selected into the sample.
+#' @description It is common to want a random sampling of data from a large
+#'   data set for analysis of various forms. The \code{sample_rows} function
+#'   takes arguments needed to return a random sample of a data frame.
+#'   Providing the source data frame, a sample size, and whether or not
+#'   replacement is allowed in the sampling is all that is required for
+#'   returning the sample. Row names (number typically) are returned in the
+#'   sample making it easy to identify which observations are selected into the
+#'   sample.
 #' @param x an object; the source \bold{data.frame} to be sampled from
 #' @param n a numeric value; sample size
 #' @param seed \code{(optional)} a numeric value; the \bold{seed} for randomly

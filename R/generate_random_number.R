@@ -1,7 +1,8 @@
 #' @title Random Number Generator
 #'
-#' @description \code{generate_random_number} draws a random number(s) from a range either
-#'   as an integer or a float with a specified number of decimal digits
+#' @description \code{generate_random_number} draws a random number(s) from a
+#'   range either as an integer or a float with a specified number of decimal
+#'   digits
 #' @param n numeric; a numeric value that specifies the number of random
 #'   numbers the user would like returned
 #' @param min numeric; a numeric value that specifies the minimum number in the
