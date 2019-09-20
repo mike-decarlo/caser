@@ -2,10 +2,7 @@
 % Please edit documentation in R/sort_columns.R
 \name{sort_columns}
 \alias{sort_columns}
-\title{Dataframe Column Sorting Function
-\code{sort_columns} takes two arguments, the name of a dataframe and the
-  order (ascending or descending), and will then provide the dataframe in
-  the column sorting as specified.}
+\title{Dataframe Column Sorting Function}
 \usage{
 sort_columns(df = NULL, order = "asc", verbose = FALSE)
 }
@@ -19,7 +16,6 @@ ascending order; if \code{"desc"}, the function sorts in descending order.}
 objects being sorted.}
 }
 \description{
-Dataframe Column Sorting Function
 \code{sort_columns} takes two arguments, the name of a dataframe and the
   order (ascending or descending), and will then provide the dataframe in
   the column sorting as specified.

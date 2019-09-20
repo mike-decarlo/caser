@@ -4,12 +4,12 @@
 \alias{sample_compliment}
 \title{A Sampling Compliment Function}
 \usage{
-sample_compliment(orig, samp)
+sample_compliment(orig = NULL, samp = NULL)
 }
 \arguments{
-\item{orig}{a data.frame; the original/complete data set being sampled}
+\item{orig}{an object; the original/complete data set being sampled}
 
-\item{samp}{a data.frame; a subset, randomly sampled from the \code{orig}}
+\item{samp}{an object; a subset, randomly sampled from the \code{orig}}
 }
 \description{
 Designed to work in tandem with \code{sample_rows} to return
@@ -17,9 +17,9 @@ Designed to work in tandem with \code{sample_rows} to return
 }
 \examples{
 iris_test <- sample_rows(
-  df = iris
+  x = iris
   , n = floor(0.2 * nrow(iris))
-  , s = 1
+  , seed = 1
   , replace = FALSE
 )
 iris_train <- sample_compliment(orig = iris, samp = iris_test)
