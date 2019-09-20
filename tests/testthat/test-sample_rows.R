@@ -14,12 +14,6 @@ test_that("error if NULL x argument or NULL data.frame object", {
 
 x <- data.frame("X" = rnorm(100, 0, 1), "Y" = runif(100, 0, 1))
 
-test_that("error if x is not class = data.frame", {
-  expect_error(
-    sample_rows(x = as.matrix(x), n = 50)
-  )
-})
-
 test_that("errors when sample size exceeds population, no replacement", {
   expect_error(sample_rows(x = x, n = 200, replace = F))
 })
