@@ -1,5 +1,5 @@
 #' @title A Sampling Compliment Function
-#' 
+#'
 #' @description Designed to work in tandem with \code{sample_rows} to return
 #'   a complimentary data set to a sample from an original set.
 #' @param orig a data.frame; the original/complete data set being sampled
