@@ -13,9 +13,9 @@ column_class(df = NULL, find_class = NULL)
 value(s) of column class types}
 }
 \description{
-The \code{column_class} function takes two arguments, \code{x}, a data.frame
-object, and \code{find_class}, a single or vector of character value(s) of
-the class type desired.
+The \code{column_class} function takes two arguments, \code{x},
+a data.frame object, and \code{find_class}, a single or vector of character
+value(s) of the class type desired.
 }
 \examples{
 x <- data.frame(

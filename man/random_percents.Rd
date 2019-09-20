@@ -12,8 +12,8 @@ random_percents(b = NULL, s = NULL)
 \item{s}{numeric; the \bold{seed} for randomly generating numbers.}
 }
 \description{
-Useful to split a data value into random parts that will sum back to the
-  total.
+Useful to split a data value into random parts that will sum
+  back to the total.
 }
 \examples{
 # With default seed value (1)

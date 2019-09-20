@@ -18,13 +18,14 @@ generating numbers.}
 \code{TRUE} if yes, \code{FALSE} (by default) if no}
 }
 \description{
-It is common to want a random sampling of data from a large data set for
-  analysis of various forms. The \code{sample_rows} function takes
-  arguments needed to return a random sample of a data frame. Providing the
-  source data frame, a sample size, and whether or not replacement is
-  allowed in the sampling is all that is required for returning the sample.
-  Row names (number typically) are returned in the sample making it easy to
-  identify which observations are selected into the sample.
+It is common to want a random sampling of data from a large
+  data set for analysis of various forms. The \code{sample_rows} function
+  takes arguments needed to return a random sample of a data frame.
+  Providing the source data frame, a sample size, and whether or not
+  replacement is allowed in the sampling is all that is required for
+  returning the sample. Row names (number typically) are returned in the
+  sample making it easy to identify which observations are selected into the
+  sample.
 }
 \examples{
 iris_samp <- sample_rows(iris, 5, replace = FALSE)

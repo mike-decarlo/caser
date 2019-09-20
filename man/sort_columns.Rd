@@ -16,9 +16,9 @@ ascending order; if \code{"desc"}, the function sorts in descending order.}
 objects being sorted.}
 }
 \description{
-\code{sort_columns} takes two arguments, the name of a dataframe and the
-  order (ascending or descending), and will then provide the dataframe in
-  the column sorting as specified.
+\code{sort_columns} takes two arguments, the name of a
+  dataframe and the order (ascending or descending), and will then provide
+  the dataframe in the column sorting as specified.
 }
 \keyword{columns}
 \keyword{sort}
