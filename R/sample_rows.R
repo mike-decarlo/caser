@@ -23,7 +23,7 @@ sample_rows <- function(x = NULL, n, seed = 1, replace = FALSE) {
   rownames(x) <- 1:nrow(x)
   if (replace == FALSE && n > nrow(x)) {
     stop(
-      paste0(
+      stringr::str_c(
         "The value for argument 'n' exceeds the number of rows in 'df'.\n"
         , "Please adjust 'n' to a value less than or equal to the number of"
         , " rows in 'df'. \n"

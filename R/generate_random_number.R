@@ -28,7 +28,7 @@ generate_random_number <- function(n = NULL, min = NULL, max = NULL
   # Min should be less than or equal to max, if not switch values
   if (min > max) {
     message(
-      paste0(
+      stringr::str_c(
         "Warning: Min must be less than or equal to max.\n"
         , "Switching values to satisfy requirements.\n"
       )
@@ -48,14 +48,14 @@ generate_random_number <- function(n = NULL, min = NULL, max = NULL
   } else if (type == "float" & class(digits) != "numeric") {
     if (is.na(as.numeric(digits))) {
       stop(
-        paste0(
+        stringr::str_c(
           "Error: Argument 'digits' must be a numeric or character string of a"
           , " number value.\nE.g., 1 or '1', but not 'e'.\n"
           )
         )
     } else {
       message(
-        paste0(
+        stringr::str_c(
           "Non-numeric value entered for argument 'digits'.\n"
           , "Converting to numeric...\n"
           )
@@ -69,7 +69,7 @@ generate_random_number <- function(n = NULL, min = NULL, max = NULL
     (round(runif(n = n, min = min, max = max), digits = digits))
   } else {
     stop(
-      paste0(
+      stringr::str_c(
         "Error: Argument 'type' must have a value of either 'integer' or"
         , "'float'.\n"
       )

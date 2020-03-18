@@ -20,7 +20,7 @@
 column_class <- function(df = NULL, find_class = NULL) {
   if (is.null(colnames(df))) {
     stop(
-      paste0(
+      stringr::str_c(
         "\nObject "
         , deparse(substitute(df))
         , " does not contain named columns.\n"

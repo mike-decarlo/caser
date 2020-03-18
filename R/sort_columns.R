@@ -23,7 +23,7 @@ sort_columns <- function(df = NULL, order = "asc", verbose = FALSE) {
   }
   if (!(order %in% c("asc", "desc"))) {
     stop(
-      paste0(
+      stringr::str_c(
         "\nThe 'order' argument should have a value of 'asc' for ascending or "
         , "'desc' for descending ordering of the dataframe columns.\n"
       )
@@ -31,7 +31,7 @@ sort_columns <- function(df = NULL, order = "asc", verbose = FALSE) {
   }
   if (verbose == TRUE) {
     message(
-      paste0(
+      stringr::str_c(
         "\nObject 'df' columns being sorted in "
         , ifelse(order == "asc", "ascending", "descending")
         , ", alphabetical order.\n"
