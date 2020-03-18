@@ -22,14 +22,13 @@ sample_rows <- function(x = NULL, n, seed = 1, replace = FALSE) {
   x <- as.data.frame(x)
   rownames(x) <- 1:nrow(x)
   if (replace == FALSE && n > nrow(x)) {
-    message(
+    stop(
       paste0(
         "The value for argument 'n' exceeds the number of rows in 'df'.\n"
         , "Please adjust 'n' to a value less than or equal to the number of"
         , " rows in 'df'. \n"
         )
       )
-    stop()
   }
   set.seed(seed)
   r <- sample(x = nrow(x), size = n, replace = replace)
