@@ -4,8 +4,13 @@
 \alias{generate_random_number}
 \title{Random Number Generator}
 \usage{
-generate_random_number(n = NULL, min = NULL, max = NULL,
-  type = "integer", digits = NULL)
+generate_random_number(
+  n = NULL,
+  min = NULL,
+  max = NULL,
+  type = "integer",
+  digits = NULL
+)
 }
 \arguments{
 \item{n}{numeric; a numeric value that specifies the number of random
