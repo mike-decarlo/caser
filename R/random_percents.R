@@ -17,8 +17,8 @@
 #'
 #' @export
 random_percents <- function(b = NULL, s = NULL) {
-  if (!is.null(s)){
-    if (is.numeric(s)){
+  if (!is.null(s)) {
+    if (is.numeric(s)) {
       set.seed(s)
     } else {
       stop("\n's' must be a numeric value.\n")
