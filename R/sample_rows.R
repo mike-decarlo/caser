@@ -20,7 +20,7 @@
 #' @export
 sample_rows <- function(x = NULL, n, seed = 1, replace = FALSE) {
   x <- as.data.frame(x)
-  rownames(x) <- 1:nrow(x)
+  rownames(x) <- seq_len(nrow(x))
   if (replace == FALSE && n > nrow(x)) {
     stop(
       stringr::str_c(
