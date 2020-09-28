@@ -9,7 +9,7 @@ test_that("num_subs can be NULL", {
 
 test_that("if df not data.frame it gets converted", {
   df <- as.matrix(df)
-  expect_silent(subset_frame(df = df, n = 4))
+  expect_silent(subset_frame(df = df, n = 1))
 })
 
 test_that("null df values error", {
