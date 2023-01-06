@@ -21,27 +21,35 @@ sort_columns <- function(df = NULL, order = "asc", verbose = FALSE) {
       "\nThe 'order' argument requires a character input of 'asc' or 'desc'.\n"
     )
   }
-  if (!(order %in% c("asc", "desc"))) {
+  if (!(
+    stringr::str_to_lower(order) %in%
+      c("asc", "a", "ascending", "desc", "d", "descending")
+    )) {
     stop(
       stringr::str_c(
-        "\nThe 'order' argument should have a value of 'asc' for ascending or "
-        , "'desc' for descending ordering of the dataframe columns.\n"
+        "\nThe 'order' argument should have a value of 'asc/a/ascending' for ",
+        "ascending or 'desc/d/descending' for descending ordering of the ",
+        "dataframe columns.\n"
       )
     )
   }
   if (verbose == TRUE) {
     message(
       stringr::str_c(
-        "\nObject 'df' columns being sorted in "
-        , ifelse(order == "asc", "ascending", "descending")
-        , ", alphabetical order.\n"
+        "\nObject 'df' columns being sorted in ",
+        ifelse(
+          stringr::str_to_lower(order) %in% c("asc", "a", "ascending"),
+          "ascending",
+          "descending"
+        ),
+        ", alphabetical order.\n"
       )
     )
   }
-  if (order == "asc") {
-    df <- df[, order(colnames(df), decreasing = F)]
-  } else if (order == "desc") {
-    df <- df[, order(colnames(df), decreasing = T)]
+  if (stringr::str_to_lower(order) %in% c("asc", "a", "ascending")) {
+    df <- dplyr::select(x, order(colnames(x), decreasing = FALSE))
+  } else if (stringr::str_to_lower(order) %in% c("desc", "d", "descending")) {
+    df <- dplyr::select(x, order(colnames(x), decreasing = TRUE))
   }
   df
 }
