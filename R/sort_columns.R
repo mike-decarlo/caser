@@ -9,6 +9,7 @@
 #' @param verbose logical; if \code{TRUE}, the function prints messages about
 #'   objects being sorted.
 #' @keywords sort columns
+#' @importFrom dplyr select
 #' @export
 sort_columns <- function(df = NULL, order = "asc", verbose = FALSE) {
   if (is.null(df)) {
