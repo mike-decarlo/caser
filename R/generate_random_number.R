@@ -22,6 +22,8 @@
 #' generate_random_number(
 #'   n = 3, min = 1, max = 10, type = "float", digits = "5"
 #'   )
+#' @importFrom stats runif
+#' @importFrom stringr str_c
 #' @export
 generate_random_number <- function(n = NULL, min = NULL, max = NULL
   , type = "integer", digits = NULL) {
@@ -45,7 +47,7 @@ generate_random_number <- function(n = NULL, min = NULL, max = NULL
     stop(
       "Error: Argument 'digits' must have a number value for type = 'float'.\n"
       )
-  } else if (type == "float" & class(digits) != "numeric") {
+  } else if (type == "float" & !is(digits, "numeric")) {
     if (is.na(as.numeric(digits))) {
       stop(
         stringr::str_c(

@@ -17,9 +17,10 @@ sort_columns <- function(df = NULL, order = "asc", verbose = FALSE) {
       "The 'df' argument must be a non-null, dataframe object.\n"
     )
   }
-  if (class(order) != "character") {
+  if (!is(order, "character")) {
     stop(
-      "\nThe 'order' argument requires a character input of 'asc' or 'desc'.\n"
+      "\nThe 'order' argument requires a character input of 'asc/a/ascending'",
+      " or 'desc/d/descending'.\n"
     )
   }
   if (!(

@@ -15,6 +15,7 @@
 #' # With specific seed value (45) and more bins (9)
 #' random_percents(b = 9, s = 45)
 #'
+#' @importFrom stats runif
 #' @export
 random_percents <- function(b = NULL, s = NULL) {
   if (!is.null(s)) {

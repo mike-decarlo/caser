@@ -22,7 +22,7 @@ import_batch_files <- function(p = NULL, f = NULL, ext = NULL, ...) {
   # Check if p is non-null and character class
   if (is.null(p)) {
     stop("\nArgument 'p' must be non-null.\n")
-  } else if (class(p) != "character") {
+  } else if (!is(p, "character")) {
     stop(stringr::str_c(
         "\nArgument 'p' must be a character string.\n"
       )
@@ -54,7 +54,7 @@ import_batch_files <- function(p = NULL, f = NULL, ext = NULL, ...) {
   )
   d <- purrr::map(
     d
-    , caser::sort_columns
+    , sort_columns
   )
   d <- dplyr::bind_rows(d)
 }
