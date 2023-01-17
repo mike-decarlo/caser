@@ -9,11 +9,10 @@
 #'   where a value less than or equal to the threshold is considered a success
 #'   (TRUE) and a value greater than the cutoff is a failure (FALSE)
 #' @keywords experiment
-#' @import number_digits generate_random_number
 #' @export
 generate_experiment <- function(n = 1000, threshold = 0.01) {
-  digi <- number_digits(threshold)
-  nums <- generate_random_number(
+  digi <- caser::number_digits(threshold)
+  nums <- caser::generate_random_number(
     n = n,
     min = 0,
     max = 1,

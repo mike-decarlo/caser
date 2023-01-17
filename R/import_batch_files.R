@@ -14,7 +14,6 @@
 #'   \item \code{".xlsx"}
 #'   }
 #' @param ... \code{(optional)} additional arguments specific to \code{f}.
-#' @import sort_columns
 #' @importFrom stringr str_c
 #' @importFrom purrr map
 #' @importFrom dplyr bind_rows
@@ -55,7 +54,7 @@ import_batch_files <- function(p = NULL, f = NULL, ext = NULL, ...) {
   )
   d <- purrr::map(
     d
-    , sort_columns
+    , caser::sort_columns
   )
   d <- dplyr::bind_rows(d)
 }
