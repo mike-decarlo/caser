@@ -26,7 +26,7 @@ sort_columns <- function(df = NULL, order = "asc", verbose = FALSE) {
   if (!(
     stringr::str_to_lower(order) %in%
       c("asc", "a", "ascending", "desc", "d", "descending")
-    )) {
+  )) {
     stop(
       stringr::str_c(
         "\nThe 'order' argument should have a value of 'asc/a/ascending' for ",

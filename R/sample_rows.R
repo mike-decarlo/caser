@@ -24,10 +24,10 @@ sample_rows <- function(x = NULL, n, seed = 1, replace = FALSE) {
   if (replace == FALSE && n > nrow(x)) {
     stop(
       stringr::str_c(
-        "The value for argument 'n' exceeds the number of rows in 'df'.\n"
-        , "Please adjust 'n' to a value less than or equal to the number of"
-        , " rows in 'df'. \n"
-        )
+        "The value for argument 'n' exceeds the number of rows in 'df'.\n",
+        "Please adjust 'n' to a value less than or equal to the number of",
+        " rows in 'df'. \n"
+      )
       )
   }
   set.seed(seed)

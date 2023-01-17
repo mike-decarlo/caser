@@ -14,6 +14,7 @@
 #'   \item \code{".xlsx"}
 #'   }
 #' @param ... \code{(optional)} additional arguments specific to \code{f}.
+#' @import sort_columns
 #' @importFrom stringr str_c
 #' @importFrom purrr map
 #' @importFrom dplyr bind_rows
@@ -24,7 +25,7 @@ import_batch_files <- function(p = NULL, f = NULL, ext = NULL, ...) {
     stop("\nArgument 'p' must be non-null.\n")
   } else if (!is(p, "character")) {
     stop(stringr::str_c(
-        "\nArgument 'p' must be a character string.\n"
+      "\nArgument 'p' must be a character string.\n"
       )
     )
   }
@@ -43,8 +44,8 @@ import_batch_files <- function(p = NULL, f = NULL, ext = NULL, ...) {
   # If passes checks, start importing
   paths <- list.files(
     path = p
-    , all.files = F
-    , full.names = T
+    , all.files = FALSE
+    , full.names = TRUE
     , pattern = ext
   )
   d <- purrr::map(

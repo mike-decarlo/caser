@@ -24,7 +24,7 @@ column_class <- function(df = NULL, find_class = NULL) {
         "\nObject "
         , deparse(substitute(df))
         , " does not contain named columns.\n"
-        )
+      )
       )
   } else if (is.null(find_class)) {
     #return all column names and classes
@@ -33,7 +33,7 @@ column_class <- function(df = NULL, find_class = NULL) {
     # return all column names and classes where class matches
     c <- sapply(df, class)
     if (length(find_class) > 1) {
-    c <- c[c %in% find_class]
+      c <- c[c %in% find_class]
     } else {
       c <- c[c == find_class]
     }

@@ -12,11 +12,10 @@ number_digits <- function(x) {
       stop("Argument 'x' must be a number.")
     }
   )
-  
   if ((x %% 1) != 0) {
     as.numeric(
       nchar(
-        strsplit(sub('0+$', '', as.character(x)), ".", fixed = TRUE)[[1]][[2]]
+        strsplit(sub("0+$", "", as.character(x)), ".", fixed = TRUE)[[1]][[2]]
       )
     )
   } else {

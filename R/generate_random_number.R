@@ -25,14 +25,14 @@
 #' @importFrom stats runif
 #' @importFrom stringr str_c
 #' @export
-generate_random_number <- function(n = NULL, min = NULL, max = NULL
-  , type = "integer", digits = NULL) {
+generate_random_number <- function(n = NULL, min = NULL, max = NULL,
+                                   type = "integer", digits = NULL) {
   # Min should be less than or equal to max, if not switch values
   if (min > max) {
     message(
       stringr::str_c(
-        "Warning: Min must be less than or equal to max.\n"
-        , "Switching values to satisfy requirements.\n"
+        "Warning: Min must be less than or equal to max.\n",
+        "Switching values to satisfy requirements.\n"
       )
     )
     temp <- min
@@ -43,24 +43,24 @@ generate_random_number <- function(n = NULL, min = NULL, max = NULL
   # Error handling for number of digits
   # Should be a number value (either as a numeric or character class)
   # Should be an integer
-  if (type == "float" & is.null(digits)) {
+  if (type == "float" && is.null(digits)) {
     stop(
       "Error: Argument 'digits' must have a number value for type = 'float'.\n"
-      )
-  } else if (type == "float" & !is(digits, "numeric")) {
+    )
+  } else if (type == "float" && !is(digits, "numeric")) {
     if (is.na(as.numeric(digits))) {
       stop(
         stringr::str_c(
-          "Error: Argument 'digits' must be a numeric or character string of a"
-          , " number value.\nE.g., 1 or '1', but not 'e'.\n"
-          )
+          "Error: Argument 'digits' must be a numeric or character string of a",
+          " number value.\nE.g., 1 or '1', but not 'e'.\n"
+        )
         )
     } else {
       message(
         stringr::str_c(
-          "Non-numeric value entered for argument 'digits'.\n"
-          , "Converting to numeric...\n"
-          )
+          "Non-numeric value entered for argument 'digits'.\n",
+          "Converting to numeric...\n"
+        )
         )
       digits <- round(as.numeric(digits), 0)
       (round(stats::runif(n = n, min = min, max = max), digits = digits))

@@ -9,6 +9,7 @@
 #'   where a value less than or equal to the threshold is considered a success
 #'   (TRUE) and a value greater than the cutoff is a failure (FALSE)
 #' @keywords experiment
+#' @import number_digits generate_random_number
 #' @export
 generate_experiment <- function(n = 1000, threshold = 0.01) {
   digi <- number_digits(threshold)
@@ -19,8 +20,6 @@ generate_experiment <- function(n = 1000, threshold = 0.01) {
     type = "float",
     digits = digi
   )
-  
   bools <- ifelse(nums <= threshold, TRUE, FALSE)
-  
   data.frame(num_vals = nums, bool_vals = bools)
 }

@@ -44,6 +44,6 @@ subset_frame <- function(df = NULL, n = NULL) {
       1:n
       , each = ceiling(nrow(df) / n)
       , length.out = nrow(df)
-      )
+    )
     )
 }
