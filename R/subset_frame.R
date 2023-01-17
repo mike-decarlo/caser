@@ -30,7 +30,7 @@ subset_frame <- function(df = NULL, n = NULL) {
     stop("\nArgument 'df' must be a non-null object.\n")
   } else if (!is(df, "data.frame")) {
     df <- as.data.frame(df)
-    warning("\nArgument 'df' converted to data.frame class for sub-framing.\n")
+    message("\nArgument 'df' converted to data.frame class for sub-framing.\n")
   }
   if (is.null(n)) {
     n <- 10

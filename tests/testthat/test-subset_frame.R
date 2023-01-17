@@ -16,8 +16,9 @@ test_that(
   {
     expect_error(subset_frame(df = df, n = "4"))
   })
+df <- rnorm(100, 0, 1)
 test_that(
-  "if df not a data.frame it gets converted and warning produced",
+  "if df not a data.frame it gets converted and message produced",
   {
-    expect_warning(subset_frame(df = rnorm(100, 0, 1), n = 2))
+    expect_message(subset_frame(df = rnorm(100, 0, 1), n = 2))
   })
