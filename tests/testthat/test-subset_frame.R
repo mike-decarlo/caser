@@ -16,3 +16,8 @@ test_that(
   {
     expect_error(subset_frame(df = df, n = "4"))
   })
+test_that(
+  "if df not a data.frame it gets converted and warning produced",
+  {
+    expect_warning(subset_frame(df = rnorm(100, 0, 1), n = 2))
+  })
