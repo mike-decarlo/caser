@@ -61,13 +61,13 @@ generate_random_number <- function(n = NULL, min = NULL, max = NULL
           )
         )
       digits <- round(as.numeric(digits), 0)
-      (round(runif(n = n, min = min, max = max), digits = digits))
+      (round(stats::runif(n = n, min = min, max = max), digits = digits))
     }
   } else if (type == "float") {
-    (round(runif(n = n, min = min, max = max), digits = digits))
+    (round(stats::runif(n = n, min = min, max = max), digits = digits))
   } else if (type == "integer") {
     digits <- 0
-    (round(runif(n = n, min = min, max = max), digits = digits))
+    (round(stats::runif(n = n, min = min, max = max), digits = digits))
   } else {
     stop(
       stringr::str_c(

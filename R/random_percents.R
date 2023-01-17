@@ -27,7 +27,7 @@ random_percents <- function(b = NULL, s = NULL) {
   if (is.null(b) || !is.numeric(b) || b == 0) {
     stop("\n'b' must be a numeric value > 0.\n")
   } else {
-    x <- round(runif(b, 0, 100), 0)
+    x <- round(stats::runif(b, 0, 100), 0)
     (x / sum(x))
   }
 }

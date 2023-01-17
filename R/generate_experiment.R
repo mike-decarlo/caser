@@ -8,8 +8,8 @@
 #' @keywords experiment
 #' @export
 generate_experiment <- function(n = 1000, threshold = 0.01) {
-  digi <- number_digits(threshold)
-  nums <- generate_random_number(
+  digi <- caser::number_digits(threshold)
+  nums <- caser::generate_random_number(
     n = n,
     min = 0,
     max = 1,
