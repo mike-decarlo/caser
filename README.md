@@ -1,5 +1,8 @@
 # caser
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/mike-decarlo/caser/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/mike-decarlo/caser/actions/workflows/R-CMD-check.yaml)
 [![Build Status](https://travis-ci.org/mike-decarlo/caser.svg?branch=master)](https://travis-ci.org/mike-decarlo/caser) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/mike-decarlo/caser?branch=master&svg=true)](https://ci.appveyor.com/project/mike-decarlo/caser) [![codecov](https://codecov.io/gh/mike-decarlo/caser/branch/master/graph/badge.svg)](https://codecov.io/gh/mike-decarlo/caser)
+<!-- badges: end -->
 
 The <code>{caser}</code> package (caser = [case]s of data + l[aser]) for R contains tools for working with dataset subsetting and sampling. The goal here is to provide users an experience that is easier and faster than trying to figure out how to combine R functionality to arrive at these solutions. Additionally, while these tools are not exactly revolutionary, they are methods I have returned to again and again and so speeding them up and making them easier streamlines my work and I hope they do the same for other users as well.
 
