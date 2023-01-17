@@ -48,9 +48,9 @@ sort_columns <- function(df = NULL, order = "asc", verbose = FALSE) {
     )
   }
   if (stringr::str_to_lower(order) %in% c("asc", "a", "ascending")) {
-    df <- dplyr::select(x, order(colnames(x), decreasing = FALSE))
+    df <- dplyr::select(df, order(colnames(df), decreasing = FALSE))
   } else if (stringr::str_to_lower(order) %in% c("desc", "d", "descending")) {
-    df <- dplyr::select(x, order(colnames(x), decreasing = TRUE))
+    df <- dplyr::select(df, order(colnames(df), decreasing = TRUE))
   }
   df
 }
