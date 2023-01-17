@@ -7,9 +7,12 @@
 generate_experiment(n = 1000, threshold = 0.01)
 }
 \arguments{
-\item{n}{a numeric, integer value.}
+\item{n}{a numeric, integer value indicating the number of observations in
+the experiment}
 
-\item{x}{a numeric, float value.}
+\item{threshold}{a numeric, float value indicating the threshold cutoff
+where a value less than or equal to the threshold is considered a success
+(TRUE) and a value greater than the cutoff is a failure (FALSE)}
 }
 \description{
 \code{generate_experiment} takes two arguments, n is the number
