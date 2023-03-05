@@ -4,12 +4,12 @@
 \alias{random_percents}
 \title{Return a vector of random proportions/percents that sum to 1/100}
 \usage{
-random_percents(b = NULL, s = NULL)
+random_percents(.bin = NULL, .seed = NULL)
 }
 \arguments{
-\item{b}{numeric; the number of \bold{bins} to generate.}
+\item{.bin}{numeric; the number of \bold{bins} to generate.}
 
-\item{s}{numeric; the \bold{seed} for randomly generating numbers.}
+\item{.seed}{numeric; the \bold{seed} for randomly generating numbers.}
 }
 \description{
 Useful to split a data value into random parts that will sum
@@ -17,13 +17,13 @@ Useful to split a data value into random parts that will sum
 }
 \examples{
 # With default seed value (1)
-random_percents(b = 2)
+random_percents(.bin = 2)
 
 # With specific seed value (45)
-random_percents(b = 2, s = 45)
+random_percents(.bin = 2, .seed = 45)
 
 # With specific seed value (45) and more bins (9)
-random_percents(b = 9, s = 45)
+random_percents(.bin = 9, .seed = 45)
 
 }
 \keyword{percent}

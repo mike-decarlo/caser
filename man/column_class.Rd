@@ -4,18 +4,18 @@
 \alias{column_class}
 \title{Returns all columns and classes matching specified class}
 \usage{
-column_class(df = NULL, find_class = NULL)
+column_class(.data = NULL, find_class = NULL)
 }
 \arguments{
-\item{df}{data.frame; a \bold{data.frame} with named columns}
+\item{.data}{data.frame; a \bold{data.frame} with named columns}
 
 \item{find_class}{string or string vector; a single or vector of string
 value(s) of column class types}
 }
 \description{
-The \code{column_class} function takes two arguments, \code{x},
-a data.frame object, and \code{find_class}, a single or vector of character
-value(s) of the class type desired.
+The \code{column_class} function takes two arguments,
+  \code{.data}, a data.frame object, and \code{find_class}, a single or
+  vector of character value(s) of the class type desired.
 }
 \examples{
 x <- data.frame(

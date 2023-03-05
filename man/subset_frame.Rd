@@ -4,11 +4,11 @@
 \alias{subset_frame}
 \title{A sub-framing function}
 \usage{
-subset_frame(df = NULL, n = NULL)
+subset_frame(.data = NULL, n = NULL)
 }
 \arguments{
-\item{df}{data.frame; a \bold{data.frame} with any number of columns or rows
-to be subsetted to equally sized sub-frames.}
+\item{.data}{data.frame; a \bold{data.frame} with any number of columns or rows
+to be sub-setted to equally sized sub-frames.}
 
 \item{n}{numeric; value of the \bold{number of sub-frames} desired. Defaults
 to \code{NULL} in which case, if no value is entered, the frame will be
@@ -23,13 +23,13 @@ The \code{"subset_frame"} function is a subsetting function
   intended to produce equivalently size subsets from a single data frame.
   This is done by evaluating the number of observations in the original data
   set and calculating how many rows should be in each subset for a given
-  nubmer of subsets.
+  number of subsets.
 The purpose behind \code{"subset_frame"} is to break apart large data frames
   into smaller ones for the sake of efficiency. This could be useful for
   test sets for code or method testing, etc.
 }
 \examples{
-# Data frame of 100 random observations from normal and uniform
+# Data.frame of 100 random observations from normal and uniform
 df <- data.frame("X" = rnorm(100, 0, 1), "Y" = runif(100, 0, 1))
 
 # Sub-frame to 2 data frames

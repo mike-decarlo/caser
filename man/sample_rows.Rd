@@ -4,17 +4,17 @@
 \alias{sample_rows}
 \title{Sample Random Rows from Data Frame}
 \usage{
-sample_rows(x = NULL, n, seed = 1, replace = FALSE)
+sample_rows(.data = NULL, n, .seed = 1, replace = FALSE)
 }
 \arguments{
-\item{x}{an object; the source \bold{data.frame} to be sampled from}
+\item{.data}{an object; the source \bold{data.frame} to be sampled from}
 
 \item{n}{a numeric value; sample size}
 
-\item{seed}{\code{(optional)} a numeric value; the \bold{seed} for randomly
+\item{.seed}{\code{(optional)} a numeric value; the \bold{seed} for randomly
 generating numbers.}
 
-\item{replace}{a logical value; should the sampling method use repalcement?
+\item{replace}{a logical value; should the sampling method use replacement?
 \code{TRUE} if yes, \code{FALSE} (by default) if no}
 }
 \description{

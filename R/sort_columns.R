@@ -1,9 +1,9 @@
-#' @title Dataframe Column Sorting Function
+#' @title Data.frame Column Sorting Function
 #'
 #' @description \code{sort_columns} takes two arguments, the name of a
-#'   dataframe and the order (ascending or descending), and will then provide
-#'   the dataframe in the column sorting as specified.
-#' @param df data.frame; the source \bold{data.frame} to be sorted.
+#'   data.frame and the order (ascending or descending), and will then provide
+#'   the data.frame in the column sorting as specified.
+#' @param .data data.frame; the source \bold{data.frame} to be sorted.
 #' @param order string; if \code{"asc"}, the function sorts in
 #'   ascending order; if \code{"desc"}, the function sorts in descending order.
 #' @param verbose logical; if \code{TRUE}, the function prints messages about
@@ -11,10 +11,10 @@
 #' @keywords sort columns
 #' @importFrom dplyr select
 #' @export
-sort_columns <- function(df = NULL, order = "asc", verbose = FALSE) {
-  if (is.null(df)) {
+sort_columns <- function(.data = NULL, order = "asc", verbose = FALSE) {
+  if (is.null(.data)) {
     stop(
-      "The 'df' argument must be a non-null, dataframe object.\n"
+      "The '.data' argument must be a non-null, dataframe object.\n"
     )
   }
   if (!is(order, "character")) {
@@ -38,7 +38,7 @@ sort_columns <- function(df = NULL, order = "asc", verbose = FALSE) {
   if (verbose == TRUE) {
     message(
       stringr::str_c(
-        "\nObject 'df' columns being sorted in ",
+        "\nObject '.data' columns being sorted in ",
         ifelse(
           stringr::str_to_lower(order) %in% c("asc", "a", "ascending"),
           "ascending",
@@ -49,9 +49,9 @@ sort_columns <- function(df = NULL, order = "asc", verbose = FALSE) {
     )
   }
   if (stringr::str_to_lower(order) %in% c("asc", "a", "ascending")) {
-    df <- dplyr::select(df, order(colnames(df), decreasing = FALSE))
+    .data <- dplyr::select(.data, order(colnames(.data), decreasing = FALSE))
   } else if (stringr::str_to_lower(order) %in% c("desc", "d", "descending")) {
-    df <- dplyr::select(df, order(colnames(df), decreasing = TRUE))
+    .data <- dplyr::select(.data, order(colnames(.data), decreasing = TRUE))
   }
-  df
+  .data
 }

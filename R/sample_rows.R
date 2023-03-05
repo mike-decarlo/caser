@@ -8,20 +8,20 @@
 #'   returning the sample. Row names (number typically) are returned in the
 #'   sample making it easy to identify which observations are selected into the
 #'   sample.
-#' @param x an object; the source \bold{data.frame} to be sampled from
+#' @param .data an object; the source \bold{data.frame} to be sampled from
 #' @param n a numeric value; sample size
-#' @param seed \code{(optional)} a numeric value; the \bold{seed} for randomly
+#' @param .seed \code{(optional)} a numeric value; the \bold{seed} for randomly
 #'   generating numbers.
-#' @param replace a logical value; should the sampling method use repalcement?
+#' @param replace a logical value; should the sampling method use replacement?
 #'   \code{TRUE} if yes, \code{FALSE} (by default) if no
 #' @keywords sample random row
 #' @examples
 #' iris_samp <- sample_rows(iris, 5, replace = FALSE)
 #' @export
-sample_rows <- function(x = NULL, n, seed = 1, replace = FALSE) {
-  x <- as.data.frame(x)
-  rownames(x) <- seq_len(nrow(x))
-  if (replace == FALSE && n > nrow(x)) {
+sample_rows <- function(.data = NULL, n, .seed = 1, replace = FALSE) {
+  .data <- as.data.frame(.data)
+  rownames(.data) <- seq_len(nrow(.data))
+  if (replace == FALSE && n > nrow(.data)) {
     stop(
       stringr::str_c(
         "The value for argument 'n' exceeds the number of rows in 'df'.\n",
@@ -30,10 +30,10 @@ sample_rows <- function(x = NULL, n, seed = 1, replace = FALSE) {
       )
       )
   }
-  set.seed(seed)
-  r <- sample(x = nrow(x), size = n, replace = replace)
-  d <- as.data.frame(x[r, ])
-  colnames(d) <- colnames(x)
+  set.seed(.seed)
+  r <- sample(.data = nrow(.data), size = n, replace = replace)
+  d <- as.data.frame(.data[r, ])
+  colnames(d) <- colnames(.data)
   rownames(d) <- r
   d
 }

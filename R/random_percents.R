@@ -2,33 +2,33 @@
 #'
 #' @description Useful to split a data value into random parts that will sum
 #'   back to the total.
-#' @param b numeric; the number of \bold{bins} to generate.
-#' @param s numeric; the \bold{seed} for randomly generating numbers.
+#' @param .bin numeric; the number of \bold{bins} to generate.
+#' @param .seed numeric; the \bold{seed} for randomly generating numbers.
 #' @keywords random percent proportion
 #' @examples
 #' # With default seed value (1)
-#' random_percents(b = 2)
+#' random_percents(.bin = 2)
 #'
 #' # With specific seed value (45)
-#' random_percents(b = 2, s = 45)
+#' random_percents(.bin = 2, .seed = 45)
 #'
 #' # With specific seed value (45) and more bins (9)
-#' random_percents(b = 9, s = 45)
+#' random_percents(.bin = 9, .seed = 45)
 #'
 #' @importFrom stats runif
 #' @export
-random_percents <- function(b = NULL, s = NULL) {
-  if (!is.null(s)) {
-    if (is.numeric(s)) {
-      set.seed(s)
+random_percents <- function(.bin = NULL, .seed = NULL) {
+  if (!is.null(.seed)) {
+    if (is.numeric(.seed)) {
+      set.seed(.seed)
     } else {
-      stop("\n's' must be a numeric value.\n")
+      stop("\n'.seed' must be a numeric value.\n")
     }
   }
-  if (is.null(b) || !is.numeric(b) || b == 0) {
-    stop("\n'b' must be a numeric value > 0.\n")
+  if (is.null(.bin) || !is.numeric(.bin) || .bin == 0) {
+    stop("\n'.bin' must be a numeric value > 0.\n")
   } else {
-    x <- round(stats::runif(b, 0, 100), 0)
+    x <- round(stats::runif(.bin, 0, 100), 0)
     (x / sum(x))
   }
 }

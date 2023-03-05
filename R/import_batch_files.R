@@ -5,9 +5,9 @@
 #'   as the sole argument.
 #' @return An array with dimensions as sub-frame rows, sub-frame columns, and
 #'  and sub-frame index.
-#' @param p string; the \bold{path} to the directory containing desired files.
-#' @param f string; the \bold{function name} used for importing files.
-#' @param ext \code{(optional)} string; the file \bold{extension} to indicate
+#' @param .path string; the \bold{path} to the directory containing desired files.
+#' @param .fun string; the \bold{function name} used for importing files.
+#' @param .ext \code{(optional)} string; the file \bold{extension} to indicate
 #'   type of external data file to be imported:\itemize{
 #'   \item \code{".csv"}
 #'   \item \code{".tsv"}
@@ -18,38 +18,38 @@
 #' @importFrom purrr map
 #' @importFrom dplyr bind_rows
 #' @export
-import_batch_files <- function(p = NULL, f = NULL, ext = NULL, ...) {
-  # Check if p is non-null and character class
-  if (is.null(p)) {
-    stop("\nArgument 'p' must be non-null.\n")
-  } else if (!is(p, "character")) {
+import_batch_files <- function(.path = NULL, .fun = NULL, .ext = NULL, ...) {
+  # Check if .path is non-null and character class
+  if (is.null(.path)) {
+    stop("\nArgument '.path' must be non-null.\n")
+  } else if (!is(.path)) {
     stop(stringr::str_c(
-      "\nArgument 'p' must be a character string.\n"
+      "\nArgument '.path' must be a character string.\n"
       )
     )
   }
   # Check if file exists
-  if (!file.exists(p)) {
+  if (!file.exists(.path)) {
     stop(stringr::str_c(
       "\nDirectory at '"
-      , p
+      , .path
       , "' does not exist.\n"
     ))
   }
-  # Check that f is non-null
-  if (is.null(f)) {
-    stop("\nArgument 'f' must be the non-null value of a function name.\n")
+  # Check that .fun is non-null
+  if (is.null(.fun)) {
+    stop("\nArgument '.fun' must be the non-null value of a function name.\n")
   }
   # If passes checks, start importing
   paths <- list.files(
-    path = p
+    path = .path
     , all.files = FALSE
     , full.names = TRUE
-    , pattern = ext
+    , pattern = .ext
   )
   d <- purrr::map(
     paths
-    , f
+    , .fun
     , ...
   )
   d <- purrr::map(

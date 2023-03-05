@@ -4,14 +4,14 @@
 \alias{import_batch_files}
 \title{Import a batch of files}
 \usage{
-import_batch_files(p = NULL, f = NULL, ext = NULL, ...)
+import_batch_files(.path = NULL, .fun = NULL, .ext = NULL, ...)
 }
 \arguments{
-\item{p}{string; the \bold{path} to the directory containing desired files.}
+\item{.path}{string; the \bold{path} to the directory containing desired files.}
 
-\item{f}{string; the \bold{function name} used for importing files.}
+\item{.fun}{string; the \bold{function name} used for importing files.}
 
-\item{ext}{\code{(optional)} string; the file \bold{extension} to indicate
+\item{.ext}{\code{(optional)} string; the file \bold{extension} to indicate
 type of external data file to be imported:\itemize{
 \item \code{".csv"}
 \item \code{".tsv"}

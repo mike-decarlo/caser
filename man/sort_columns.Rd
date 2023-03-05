@@ -2,12 +2,12 @@
 % Please edit documentation in R/sort_columns.R
 \name{sort_columns}
 \alias{sort_columns}
-\title{Dataframe Column Sorting Function}
+\title{Data.frame Column Sorting Function}
 \usage{
-sort_columns(df = NULL, order = "asc", verbose = FALSE)
+sort_columns(.data = NULL, order = "asc", verbose = FALSE)
 }
 \arguments{
-\item{df}{data.frame; the source \bold{data.frame} to be sorted.}
+\item{.data}{data.frame; the source \bold{data.frame} to be sorted.}
 
 \item{order}{string; if \code{"asc"}, the function sorts in
 ascending order; if \code{"desc"}, the function sorts in descending order.}
@@ -17,8 +17,8 @@ objects being sorted.}
 }
 \description{
 \code{sort_columns} takes two arguments, the name of a
-  dataframe and the order (ascending or descending), and will then provide
-  the dataframe in the column sorting as specified.
+  data.frame and the order (ascending or descending), and will then provide
+  the data.frame in the column sorting as specified.
 }
 \keyword{columns}
 \keyword{sort}

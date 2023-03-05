@@ -1,6 +1,6 @@
 Package: caser
-Version: 0.1.2.9000
-Date: 2019-09-18
+Version: 0.1.3.9000
+Date: 2023-03-04
 Title: Streamlined Solutions for Sampling and Subsetting in R
 Authors@R: person("Mike", "DeCarlo", email = "mikedecarlo.rdev@gmail.com", role = c("aut", "cre"))
 Author: Mike DeCarlo [aut, cre]
@@ -12,7 +12,11 @@ Suggests:
 Imports:
     dplyr,
     purrr,
-    stringr
+    stringr,
+    forcats,
+    ggplot2,
+    broom,
+    stats
 Description: Quick solutions to sampling. The goal not being originality or revolutionary methods, but instead commonly used and accessable for ease and reduction of lines of code.
 License: file LICENSE
 URL: https://github.com/mike-decarlo/caser
