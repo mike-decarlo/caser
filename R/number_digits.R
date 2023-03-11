@@ -8,7 +8,7 @@
 number_digits <- function(x) {
   if (is.na(suppressWarnings(as.numeric(x)))) {
     stop("Argument 'x' must be a non-strng, number.\n")
-  } else if (!is(as.numeric(x), "numeric")) {
+  } else if (is(as.numeric(x), "numeric")) {
     warning("Argument 'x' should be a number in numeric format.\n")
     x <- as.numeric(x)
   }
