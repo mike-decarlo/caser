@@ -14,8 +14,16 @@
 #' iris_train <- sample_compliment(orig = iris, samp = iris_test)
 #' @export
 sample_compliment <- function(orig = NULL, samp = NULL) {
-  orig <- as.data.frame(orig)
-  samp <- as.data.frame(samp)
+  if (is.null(orig)) {
+    stop("Argument 'orig' must be a non-NULL data.frame.\n")
+  } else {
+    orig <- as.data.frame(orig)
+  }
+  if (is.null(samp)) {
+    stop("Argument 'samp' must be a non-NULL data.frame.\n")
+  } else {
+    samp <- as.data.frame(samp)
+  }
   rn <- rownames(orig)
   inc <- rownames(orig) %in% rownames(samp)
   rn <- rn[inc == FALSE]
