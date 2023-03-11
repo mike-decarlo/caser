@@ -22,5 +22,5 @@ x <- data.frame(
   col_c = runif(100, 10, 25),
   col_d = seq(1, 200, 2)
 )
-plot_corr(.data, "col_a")
+plot_corr(.data = x, var = "col_a")
 }
