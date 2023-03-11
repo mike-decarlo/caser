@@ -17,7 +17,7 @@ Some prerequisites to getting this product up and running in R:
 
 ### Installing
 
-Now that R is setup (with or without RStudio) and the <code>{devtools}</code> package is installed, it's possible to start downloading and installing R packages directly from Github. To download, install, and start using the {caser} package follow the steps:
+Now that R is setup (with or without RStudio) and the <code>{devtools}</code> package is installed, it's possible to start downloading and installing R packages directly from Github. To download, install, and start using the <code>{caser}</code> package follow the steps:
 - Download and install the <code>{caser}</code> package from Github
   - From R/RStudio console enter: <code>remotes::install_github("mike-decarlo/caser")</code>
 - Load the <code>{caser}</code> package library
