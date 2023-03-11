@@ -5,12 +5,7 @@
 #' @param orig an object; the original/complete data set being sampled
 #' @param samp an object; a subset, randomly sampled from the \code{orig}
 #' @examples
-#' iris_test <- sample_rows(
-#'   x = iris
-#'   , n = floor(0.2 * nrow(iris))
-#'   , seed = 1
-#'   , replace = FALSE
-#' )
+#' iris_test <- sample_rows(iris, floor(0.2 * nrow(iris)), 1, replace = FALSE)
 #' iris_train <- sample_compliment(orig = iris, samp = iris_test)
 #' @export
 sample_compliment <- function(orig = NULL, samp = NULL) {

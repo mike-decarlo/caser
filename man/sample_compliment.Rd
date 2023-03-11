@@ -16,11 +16,6 @@ Designed to work in tandem with \code{sample_rows} to return
   a complimentary data set to a sample from an original set.
 }
 \examples{
-iris_test <- sample_rows(
-  x = iris
-  , n = floor(0.2 * nrow(iris))
-  , seed = 1
-  , replace = FALSE
-)
+iris_test <- sample_rows(iris, floor(0.2 * nrow(iris)), 1, replace = FALSE)
 iris_train <- sample_compliment(orig = iris, samp = iris_test)
 }
