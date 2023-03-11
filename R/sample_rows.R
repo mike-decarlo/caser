@@ -31,7 +31,7 @@ sample_rows <- function(.data = NULL, n, .seed = 1, replace = FALSE) {
       )
   }
   set.seed(.seed)
-  r <- sample(.data = nrow(.data), size = n, replace = replace)
+  r <- sample(x = nrow(.data), size = n, replace = replace)
   d <- as.data.frame(.data[r, ])
   colnames(d) <- colnames(.data)
   rownames(d) <- r
