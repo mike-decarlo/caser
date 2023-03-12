@@ -7,7 +7,7 @@
 #' @export
 number_digits <- function(x) {
   if (is.na(suppressWarnings(as.numeric(x)))) {
-    stop("Argument 'x' must be a non-strng, number.\n")
+    stop("Argument 'x' must be a non-string, number.\n")
   } else if (!is.numeric(x) && is(as.numeric(x), "numeric")) {
     warning(paste(
         "Argument 'x' should be a number in numeric format. Converted to",
